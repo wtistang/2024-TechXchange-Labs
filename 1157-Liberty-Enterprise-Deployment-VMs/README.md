@@ -109,7 +109,7 @@ The “**server1.gym.lan**” VM contains the following components:
     ![Screens screenshot of a computer Description automatically
  generated](./images/media/image2.png)
 
-2.  Click **Red Hat** icon to access it.
+2.  Click **Red Hat** icon of the **server0** VM to access it.
 
     ![](./images/media/image3.png)
     
@@ -240,7 +240,6 @@ lab.
     ![A screenshot of a computer Description automatically
  generated](./images/media/image13.png)
 
-  
 
 
 ## Part 2: Produce Liberty “server packages” as build output
@@ -255,7 +254,7 @@ file provides the flexibility of deploying and upgrading your version of
 Liberty and applications as an immutable package, like how container
 images are deployed to Kubernetes container platforms.
 
-In the lab, the **`mavenBuid.sh`** script provides the following
+In the lab, the **mavenBuid.sh** script provides the following
 capabilities for producing server packages for deployment to a Liberty
 collective.
 
@@ -264,7 +263,7 @@ collective.
 
   - Build the application and produce a Liberty Server package
 
-  - Store the Liberty server package in a “working directory” for the
+  - Store the Liberty server package in a **working directory** for the
     lab.
 
 <table>
@@ -279,7 +278,7 @@ collective.
 
 In this section of the lab, you will use the provided shell script that
 automates the tasks for producing a server package for deployment to the
-collective.
+collective. 
 
 **Use the Maven Build script to produce a Server package**
 
@@ -298,12 +297,16 @@ collective.
 2.  Using the File viewer on the VM desktop, see that the server package
     was produced.
 
-    a. Double mouse-click on the “**Home”** folder on the Desktop VM.
+    a. Click **Activities**
+    
+    <img src="./images/media/image15a.png" width="200"/>
+
+    b. Click the “**Files”** icon.
  
     <img src="./images/media/image15.png" width="200"/>
 
-    b. From the file explorer, navigate
- to **`Home > lab-work > packagedServers`** directory.
+    c. From the file explorer, navigate
+ to the **Home > lab-work > packagedServers** directory.
  
     **TIP:** the server package is named based on the version of Liberty
  in the package, and the placeholder server name;
@@ -367,24 +370,20 @@ this lab:**
     Liberty binaries, applications, and the default configurations
 
 The output from the “**mavenBuild**” script is a Liberty Server package.
-The server package is in the following working directory.
+The server package is in the following working directory: **/home/techzone/lab-work/packagedServers**.
 
-  > /home/techzone/lab-work/packagedServers
-
-  <br/>
 
 **Congratulations!** You have used Maven and successfully produced a
 Liberty server package, which adheres to the flexible deployment
 recommended practices.
 
-<br/>
 
 Now that you have a server package, it can be deployed to local or
 remote hosts (VMs / machines) where the Liberty collective members will
 host the sample applications.
 
 In the next sections of the lab, you will continue the recommended
-practice of using automation to create a `Liberty Collective` and deploy
+practice of using automation to create a **Liberty Collective** and deploy
 the server package to two hosts (VMs), and add the deployed servers to
 the Liberty Collective, where the servers can be centrally managed by
 the collective.
@@ -392,12 +391,12 @@ the collective.
 
 ## Part 3: Create a Liberty Collective Controller
 
-A **`Liberty-ND Collective`** is a set of Liberty servers in a single
+A **Liberty-ND Collective** is a set of Liberty servers in a single
 management domain.
 
 A collective consists of at least one server with
 the **collectiveController-1.0** feature enabled that is called
-a ***collective controller***.
+a **collective controller**.
 
 **TIP:** Liberty Servers that function as Collective Controllers MUST
 have Liberty ND licenses, as these servers use
@@ -415,14 +414,14 @@ Liberty-ND.
 </table>
 
 A collective can have many servers with
-the **`collectiveMember-1.0`** feature enabled in application servers
-that are called ***collective members.***
+the **collectiveMember-1.0** feature enabled in application servers
+that are called **collective members**.
 
 ![](./images/media/image18.png)
 
-In this section of the lab, you will create the **`Collective`** and
-the **`Collective Controller`** using automation, via
-the **`createController.sh`** shell script.
+In this section of the lab, you will create the **Collective** and
+the **Collective Controller** using automation, via
+the **createController.sh** shell script.
 
 The “**createController.sh**” script provides the following capabilities
 
@@ -434,7 +433,7 @@ The “**createController.sh**” script provides the following capabilities
   - Start the Collective Controller server
 
 
-1.  Run commands below in the same command shell as you used to build
+1.  Run the following command in the same terminal window as you used to build
     the serverPackage, to create a Liberty collective controller:
 
         /home/techzone/liberty_admin_pot/lab-scripts/createController.sh
@@ -442,33 +441,30 @@ The “**createController.sh**” script provides the following capabilities
     The createController.sh script creates a Liberty server
  named **CollectiveController.**
 
-    The CollectiveController server is in the following directory:
-
-    > /home/techzone/lab-work/liberty-controller/wlp/usr/servers
+    The CollectiveController server is in the following directory: **/home/techzone/lab-work/liberty-controller/wlp/usr/servers**.
 
     - The CollectiveController server is configured with
-    the **`collectiveController-1.0`** feature which enables the server
+    the **collectiveController-1.0** feature which enables the server
     to act as the managing server for a collective
 
     - The CollectiveController server is also configured with
-    the **`adminCenter-1.0`** feature, which installs the “Liberty Admin
-    Center” UI application.
+    the **adminCenter-1.0** feature, which installs the **Liberty Admin
+    Center** UI application.
 
     - The CollectiveController server runs on HTTPS port **9491** in this
     lab
 
     ![](./images/media/image19.png)
 
-2.  Once the collective controller is started, click its **Admin Center
-    URL** to launch it in a browser window, then enter the login
-    credentials as: **admin** / **admin**.
+2.  Right-click the **Admin Center
+    URL** and select **Open link** to launch it in a browser window.
 
-    **Note:** If you see the “Warning: Potential Security Risk Ahead”, \>
- click **Advanced..-\>scroll down and \_\>Accept Risk and Continue** to
- continue.
  
     ![A screenshot of a computer Description automatically
  generated](./images/media/image20.png)
+ 
+     **Note:** If you see the **Warning: Potential Security Risk Ahead** message, click **Advanced..**, scroll down and click **Accept Risk and Continue** to
+ continue.
 
 3.  Login to the **Admin Center** using
     credentials: **admin** / **admin**.
@@ -479,7 +475,7 @@ The “**createController.sh**” script provides the following capabilities
  
     ![](./images/media/image22.png)
 
-4.  Click the **`Explore`** icon to display the servers, applications, and
+4.  Click **Explore** to display the servers, applications, and
     hosts in the Collective.
 
     ![Icon Description automatically
@@ -503,7 +499,7 @@ The “**createController.sh**” script provides the following capabilities
 
 The collective members are the Liberty servers that run your
 applications. For Liberty servers to join a collective, the servers must
-have the **`collectiveMember-1.0`** feature enabled.
+have the **collectiveMember-1.0** feature enabled.
 
 Membership in a Liberty collective is optional. Liberty servers join a
 collective by registering with a collective controller to become
@@ -522,7 +518,7 @@ sample applications, and default server configuration overrides.
 The **collectiveMember-1.0** feature was installed and enabled for the
 Liberty server that is in the server package.
 
-In this lab, you use the “**`addMember.sh`**” script to deploy the server
+In this lab, you use the **addMember.sh** script to deploy the server
 packages to the nodes, create the collective members, and join the
 members to the collective.
 
@@ -550,7 +546,7 @@ server0.gym.lan, another to the remote host VM, server1.gym.lan.
 Use the automation script to deploy the Liberty servers from the server
 package you created earlier and join them as a member to the collective.
 
-1.  In the same command shell as before, run the addMember.sh script
+1.  In the same terminal window as before, run the **addMember.sh** script
     twice with different input parameters as shown to create two Liberty
     servers.
 
