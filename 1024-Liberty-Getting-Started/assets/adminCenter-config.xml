@@ -1,0 +1,20 @@
+
+<server>
+    <featureManager>
+<feature>adminCenter-1.0</feature>
+<feature>websocket-2.1</feature>
+    </featureManager>
+   <!-- Configure administrative roles. -->
+<basicRegistry realm="basicRealm">
+   <user name="admin" password="{xor}EzY9Oi0rJmseOzI2MSw=" />
+   <user name="reader" password="{xor}EzY9Oi0rJmsNOj47Oi0s" />
+</basicRegistry> 
+   <!-- Assign admin to Administrator -->
+   <administrator-role>
+      <user>admin</user>
+   </administrator-role>
+   <reader-role>
+      <user>reader</user>
+   </reader-role>
+</server>
+

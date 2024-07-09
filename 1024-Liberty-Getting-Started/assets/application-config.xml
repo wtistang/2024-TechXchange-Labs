@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+    <!-- Configures the application on a specified context root -->
+    <webApplication contextRoot="/mysimpleweb" location="simpleweb.war" />
+
+</server>

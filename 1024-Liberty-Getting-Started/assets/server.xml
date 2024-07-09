@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+    <!-- Enable features -->
+    <featureManager>
+        <feature>servlet-6.0</feature>
+        <feature>transportSecurity-1.0</feature>
+    </featureManager>
+    
+
+    <!-- To access this server from a remote client add a host attribute to the following element, e.g. host="*" -->
+    <httpEndpoint id="defaultHttpEndpoint"
+                  host="${httpEndpoint_host}"
+                  httpPort="${httpEndpoint_port}"
+                  httpsPort="${httpEndpoint_secure_port}" />
+    <variable name="httpEndpoint_host" defaultValue="*"/>
+    <variable name="httpEndpoint_port" defaultValue="9080"/>
+    <variable name="httpEndpoint_secure_port" defaultValue="9443"/>
+
+    <!-- Automatically expand WAR files and EAR files -->
+    <applicationManager autoExpand="true"/>
+
+    <!-- Configures the application on a specified context root -->
+    <include location="application-config.xml" onConflict="MERGE"/>
+
+    <!-- Default SSL configuration enables trust for default certificates from the Java runtime -->
+    <ssl id="defaultSSLConfig" trustDefaultCerts="true" />
+    <keyStore id="defaultKeyStore" password="${keystore_password}" />
+</server>

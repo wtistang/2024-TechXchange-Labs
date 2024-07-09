@@ -1,0 +1,8 @@
+
+<server>
+    <featureManager>
+        <feature>restConnector-2.0</feature>
+    </featureManager>
+  <quickStartSecurity userName="admin" userPassword="{aes}ALCpb79MrIuO8aVUdyXKVDWNssXfX3OmL+xD2J3jWcOgLwrIq1f7/qO8tCR7JwNmcQ==" />
+</server>
+
