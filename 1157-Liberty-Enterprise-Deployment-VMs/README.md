@@ -599,7 +599,7 @@ which you need to ensure is up and running.
 2. Start the Liberty servers from the Admin Center
 
     a.  In the server details page, click the dropdown menu icon
-    of **`appServer1`** and select **`Start`** to start the server.
+    of **appServer1** and select **Start** to start the server.
 
     ![Graphical user interface, application Description automatically
  generated](./images/media/image29.png)
@@ -607,7 +607,7 @@ which you need to ensure is up and running.
     **Note:** If prompted for credentials, enter the Admin Center username
  and password as: **admin** / **admin**.
 
-    c.  Click **`Start`** to confirm the start **appServer1** server command.
+    c.  Click **Start** to confirm the start **appServer1** server command.
 
     ![A screenshot of a computer Description automatically generated with
  medium confidence](./images/media/image30.png)
@@ -615,7 +615,7 @@ which you need to ensure is up and running.
     Server **appServer1** will start, and you can see it is now in
  the **Running** state.
  
-    The appServer1 server now shows it has two applications `running`, which
+    The appServer1 server now shows it has two applications **running**, which
  are used in the labs in this workshop.
 
     - PlantsByWebSphere
@@ -625,7 +625,7 @@ which you need to ensure is up and running.
     ![A screenshot of a computer Description automatically
  generated](./images/media/image31.png)
 
-3.  Repeat the same server start procedure for **`appServer2`** server.
+3.  Repeat the same server start procedure for **appServer2** server.
     Once it is done, the **appServer2** server is started as show below:
 
     ![A screenshot of a computer Description automatically generated with
@@ -709,11 +709,11 @@ the collective.
 
 ## Part 6: Configure Dynamic Routing application High Availabilty
 
-In this section, you configure the `Dynamic Routing`` feature to route HTTP
+In this section, you configure the **Dynamic Routing** feature to route HTTP
 requests to members of Liberty collectives without having to regenerate
 the WebSphere plug-in configuration file when the environment changes.
 
-The Dynamic Routing feature, **`dynamicRouting-1.0`**, provides the
+The Dynamic Routing feature, **dynamicRouting-1.0**, provides the
 Dynamic Routing service, which dynamically retrieves routing information
 from the collective repository and delivers this information to the
 WebSphere plug-in.
@@ -728,8 +728,8 @@ perform the following tasks:
 
   - **Create a Plug-in configuration file for the HTTP Server**
 
-    The “dynamicRouting setup” command generates the “keystore” and
- “plug-in configuration files” required for dynamic routing.
+    The **dynamicRouting setu** command generates the **keystore** and
+ **plug-in configuration files** required for dynamic routing.
 
   - **Establish a secure connection between the plug-in and the
     collective controller**
@@ -745,7 +745,7 @@ In this section, you will use an automation script, which we provide in
 the lab environment, to perform the steps described above to setup and
 configure Dynamic Routing.
 
-1.  Run the `setupDynamicRouting.sh` script shown below in the same
+1.  Run the **setupDynamicRouting.sh** script shown below in the same
     command shell you used previously, to setup the plugin configuration
     for dynamic routing.
 
@@ -764,7 +764,7 @@ configure Dynamic Routing.
 
 ### 6.2 - Examine the generated “plugin-cfg.xml” file
 
-The **`plugin-cfg.xml`** file contains configuration information that
+The **plugin-cfg.xml** file contains configuration information that
 determines how the web server plug-in forwards requests to the Liberty
 servers in the collective.
 
@@ -784,10 +784,10 @@ The plugin-cfg.xml file is in the following directory:
  collectives without regenerating the WebSphere plug-in configuration
  file when the environment changes.
  
-    **Note:** The plugin-cfg.xml no does not contain the host and port
+    **Note:** The **plugin-cfg.xml** no does not contain the host and port
  information for the application servers or the application URL, etc.
  as is the case with the static HTTP server plugin. Instead, the
- plugin-cfg.xml contains the host and port information for the
+ **plugin-cfg.xml** contains the host and port information for the
  collective controller which provides the application and application
  server information dynamically to the plugin.
  
@@ -806,7 +806,7 @@ The plugin-cfg.xml file is in the following directory:
 
 ### 6.3 - Examine the Web Server’s “httpd.conf” file
 
-The **`httpd.conf`** file contains the HTTP Server configuration.
+The **httpd.conf** file contains the HTTP Server configuration.
 
 The WebSphere plug-in module is loaded by appending configuration to the
 httpd.conf file in the web server.
@@ -963,10 +963,10 @@ application does not use http sessions, and therefore the web server
 plugin can direct requests to the Liberty servers in a round-robin
 style.
 
-1.  **`Start`** both application servers (**`appServer1`** and
-    **`appServer2`**) from Liberty collective Admin Center.
+1.  **Start** both application servers (**appServer1** and
+    **appServer2**) from Liberty collective Admin Center.
 
-2.  Open a new browser window and enter the **`WhereAmI`** application URL
+2.  Open a new browser window and enter the **WhereAmI** application URL
     as:
 
         https://server0.gym.lan:8443/WhereAmI
@@ -1000,9 +1000,9 @@ style.
 ## Part 8: Produce a new “server package” using Liberty 22.0.0.12
 
 In this section of the lab, you will use the same automated
-**`mavenBuild`** script that was used in previous labs to produce a
+**mavenBuild** script that was used in previous labs to produce a
 NEW Liberty server package, with only one notable difference; the server
-package will include Liberty `22.0.0.12` instead of 22.0.0.8.
+package will include Liberty **22.0.0.12** instead of **22.0.0.8**.
 
 Producing the build output in the form of a Liberty server package zip
 file provides the flexibility of deploying and upgrading your version of
@@ -1023,7 +1023,7 @@ collective.
         /home/techzone/liberty_admin_pot/lab-scripts/mavenBuild.sh -v 22.0.0.12
  
     Take note that a new Liberty server package was created with the name:
- **`22.0.0.12-pbwServerX.zip`**
+ **22.0.0.12-pbwServerX.zip**
  
     ![A screenshot of a computer Description automatically
  generated](./images/media/image56.png)
@@ -1038,13 +1038,13 @@ collective.
 2.  Using the File viewer on the VM desktop, see that the server package
     was produced.
 
-    a. Double mouse-click on the “**Home”** folder on the Desktop VM
+    a. Double mouse-click on the **Home** folder on the Desktop VM
  
     <img src="./images/media/image15.png" width="150"/>
 
     
     b. From the file explorer, navigate
- to **`Home > lab-work > packagedServers`** directory.
+ to  the **Home > lab-work > packagedServers** directory.
  
     **TIP:** the server package is named based on the version of Liberty
  in the package, and the placeholder server name;
@@ -1075,7 +1075,7 @@ That server package you created, includes the Liberty binaries for
 22.0.0.12 and your SAME sample applications using the SAME default
 server configuration as the previous deployment in Liberty 22.0.0.8.
 
-In this lab, you use the same **`addMember.sh`** script used in previous
+In this lab, you use the same **addMember.sh** script used in previous
 labs to deploy the server packages to the nodes, deploy the server
 package, create the collective members, and join the members to the
 collective.
@@ -1092,23 +1092,23 @@ collective.
 
     ![](./images/media/image21.png)
  
-    The Liberty Collective “**Admin Center”** UI is displayed.
+    The Liberty Collective **Admin Center** UI is displayed.
  
     ![](./images/media/image22.png)
 
-3.  Click the **`Explore`** icon to display the servers, applications, and
+3.  Click the **Explore** icon to display the servers, applications, and
     in the Collective.
 
     ![Icon Description automatically
  generated](./images/media/image58.png)
 
-4.  Click the **`Servers`** view to display the servers in the Collective.
+4.  Click the **Servers** view to display the servers in the Collective.
 
     **Note:** You should already see two servers deployed in the
  collective.
  
     The servers are running **Liberty 22.0.0.8**. And the server should be
- in the “**Running**” state.
+ in the **Running** state.
 
 5.  **If the appServer1 or appServer2 servers are NOT running, go ahead
     and start them now.**
@@ -1152,11 +1152,11 @@ package you created earlier and join the member to the collective.
     > **/home/techzone/lab-work/liberty-staging/22.0.0.12-appServer1/wlp/usr/servers**
 
 2.  Go back to the Liberty collective Admin Center’s Server page. You
-    can see that the **`appServer1`** server in directory
-    **`22.0.0.12-appServer1`** is added to the collective as a new
+    can see that the **appServer1** server in directory
+    **22.0.0.12-appServer1** is added to the collective as a new
     server.
 
-    The Server is in the “**Stopped**” state.
+    The Server is in the **Stopped** state.
  
     ![](./images/media/image61.png)
 
@@ -1179,21 +1179,19 @@ identified below.
     ![A screenshot of a computer Description automatically
  generated](./images/media/image62.png)
 
-  - When the script completes, the server **`appServer2`** with Liberty
-    `22.0.0.12` is created and added to the collective.
+  - When the script completes, the server **appServer2** with Liberty
+    **22.0.0.12** is created and added to the collective.
 
   - The **addMember.sh** script created a local Liberty server
     called **appServer2** in the following directory on
-    the **server1.gym.lan** VM:
-
-    > **/opt/IBM/liberty-staging/22.0.0.12-appServer2/wlp/usr/servers**
+    the **server1.gym.lan** VM: **/opt/IBM/liberty-staging/22.0.0.12-appServer2/wlp/usr/servers**,
 
   - The server uses **9082** and **9442** as its HTTP/HTTPS ports, as
     defined ad script input parameters.
 
 
-2.  Go back to the Liberty collective Admin Center’s “**servers**” view. You can see the new member, **`appServer2`**, has been added to
-    the server list and is the **`Stopped`** state.
+2.  Go back to the Liberty collective Admin Center’s **servers** view. You can see the new member, **appServer2**, has been added to
+    the server list and is the **Stopped** state.
 
     ![A screenshot of a computer Description automatically generated with
  medium confidence](./images/media/image63.png)
@@ -1227,7 +1225,7 @@ process can also be easily automated.
 
         docker start db2_demo_data
 
-3.  **`Stop`** the collective member **`22.0.0.8-appServer1`** from the
+3.  **Stop** the collective member **22.0.0.8-appServer1** from the
     Liberty Admin Center.
 
     a. In the **server** details page, click the dropdown menu icon of
@@ -1238,7 +1236,7 @@ process can also be easily automated.
     **Note:** If prompted for credentials, enter the Admin Center username
  and password as: **admin / admin**.
  
-    b. Click **`Stop`** to confirm the stop
+    b. Click **Stop** to confirm the stop
  for **22.0.0.8-appServer1** server
  
     ![A screenshot of a computer error Description automatically generated
@@ -1258,7 +1256,7 @@ process can also be easily automated.
  
     ![](./images/media/image67.png)
  
-    b. Click **`Start`** to confirm the stop
+    b. Click **Start** to confirm the stop
  for **22.0.0.12-appServer1** server.
  
     ![A screenshot of a computer Description automatically generated with
@@ -1295,10 +1293,10 @@ medium confidence](./images/media/image71.png)
 Next, ripple start the **22.00.12-appServer2** server on
 VM **server1.gym.lan** following the same steps as above.
 
-1.  **`Stop`** the collective member **`22.0.0.8-appServer02`** from the
+1.  **Stop** the collective member **22.0.0.8-appServer02** from the
     Liberty Admin Center.
 
-5.  **`Start`** the collective member **`22.0.0.12-appServer02`** from the
+5.  **Start** the collective member **22.0.0.12-appServer02** from the
     Liberty Admin Center.
 
     The final state should reflect the 22.0.0.12 servers are RUNNING, and
