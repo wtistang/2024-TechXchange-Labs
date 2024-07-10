@@ -146,23 +146,27 @@ To simplify the lab and to allow you to focus on the migration bundle, certain s
 
 ## 1.1 Pull down the Lab artifacts and setup lab environment
 
-1.  If you have not yet cloned the GitHub repo with the lab artifacts, in a previous lab, run the following command on your terminal:
+1.  Clone the GitHub repo.
 
-    a.  Open a new Terminal window and clone the git repository to pull down the lab artifacts
+    a.  Click **Activities**.
+    
+    ![](./images/media/image011.png)
+        
+    b.  Click **Terminal** icon to open a terminal window.
 
-    ![A screen shot of a computer Description automatically generated](./images/media/image10.png)
-
-    b.  Run the commands to clone the git repository to the local system
+    ![](./images/media/image012.png)
+    
+    b.  Run the commands to clone the git repository to the local system.
 
         cd /home/techzone
 
         git clone https://github.com/IBMTechSales/appmod-pot-labfiles.git
 
-    c.  **Add “execute” permissions to the shell scripts**
+    c.  Add **execute** permissions to the shell scripts.
 
         find ./appmod-pot-labfiles -name "*.sh" -exec chmod +x {} \; 
 
-2. Start the PlantsByWebSphere application database
+2. Start the **PlantsByWebSphere** application database
 
     The PlantsByWebShere application database runs in a local docker container. Usethe command below to start the database. 
 
@@ -179,11 +183,8 @@ The Transformation Advisor is installed locally on the **Workstation** VM.
 
 1. Launch the Transformation Advisor tool using the steps below.
 
-    a.  From **Workstation** VM Desktop Tool Bar, click the **Terminal** icon to open a Terminal window.
 
-    ![](./images/media/image11.png)
-
-    b.  Launch the **Transformation Advisor** with commands:
+    a.  Launch the **Transformation Advisor** with from the terminal window using the following commands:
 
         cd /home/techzone/transformation-advisor-local-3.8.1
 
@@ -196,16 +197,16 @@ The Transformation Advisor is installed locally on the **Workstation** VM.
      ![](./images/media/image12.png)
  
     d. The **Transformation Advisor** application is started, **right-click** the application URL link and select **Open Link** to launch it in a web browser window.
- 
-     The URL is displayed in the output from the TA command: [**http://server0.gym.lan:3000**](http://server0.gym.lan:3000)
- 
+
+     The URL is displayed in the output from the TA command: **http://server0.gym.lan:3000**. 
+     
      ![](./images/media/image13.png)
  
      The **Transformation Advisor** Home page is displayed in the Web Browser.
  
      ![](./images/media/image14.png)
 
-    In the next section, you will create a new “**Workspace**” in Transformation Advisor and upload the saved results from the scan of a WebSphere Application Server that has a single application deployed, named “PlantsByWebSphere”.
+    In the next section, you will create a new “**Workspace**” in Transformation Advisor and upload the saved results from the scan of a WebSphere Application Server that has a single application deployed, named **PlantsByWebSphere**.
 
 
 ## 1.3 Create new workspace and upload scan results from a WebSphere Application Server
@@ -214,43 +215,47 @@ In this section, create a new workspace named **proof_of_concept**.
 
 A **workspace** is a designated area that will house the migration recommendations provided by Transformation Advisor based on the Data Collector scan results of your application server environment.
 
-1. Create a new workspace named **proof-of-concept**
+1. Create a new workspace named **proof\_of\_concept**
 
-    a.  From the Transformation Advisor Home page, click the **Create New** button
+    a.  From the Transformation Advisor Home page, click the **Create new** button
 
-    b.  Type **proof_of_concept** as the Workspace name. Then click the **Create** button
+    ![](./images/media/image15a.png)
+
+    b.  Type **proof\_of\_concept** as the Workspace name. Then click the **Create** button
 
      ![A screenshot of a computer Description automatically generated](./images/media/image15.png)
 
+    The Workspace page is dispalyed.
+    
+    ![](./images/media/image15b.png)
+    
 2. Upload an existing **scan results** file provided for the lab.
 
-    The scan results file is provided for you.
+    In this lab, a scan results file is provided for you. It was produced by running the Transformation Advisor **Data Collector** on a WebSphere Application Server that had the **PlantsByWebSphere** application deployed.
 
-    It was produced by running the Transformation Advisor **Data Collector** on a WebSphere Application Server that had the **PlantsByWebSphere** application deployed.
-
-    a. Click the **Upload** button
+    a. Click the **Upload** button.
+    
+    ![A screen shot of a computer Description automatically generated](./images/media/image16.png)
 
     b. Click the **Drop or add file** link. Then click the **Upload** button
 
-    ![A screen shot of a computer Description automatically generated](./images/media/image16.png)
+    ![A screen shot of a computer Description automatically generated](./images/media/image16a.png)
 
-    c.  Navigate to **Home \> Techzone \> appmod-pot-labfiles \> labs \> RuntimeModernization**
-
-    d.  Select **pbw-collection.zip** file. Then click the **Open** button
+    c.  Navigate to **Home \> Techzone \> appmod-pot-labfiles \> labs \> RuntimeModernization** directory and select **pbw-collection.zip** file. Then click the **Open** button
 
     ![A screenshot of a computer Description automatically generated](./images/media/image17.png)
 
-    e. Once the **pbw-collection.zip** has been added, click on the **Upload** button to upload the results into Transformation Advisor.
+    e. After the **pbw-collection.zip** has been added, click the **Upload** button to upload the results into Transformation Advisor.
 
     ![A screenshot of a computer Description automatically generated](./images/media/image18.png)
 
     After a few moments, the application data will be uploaded to the Transformation Advisor UI.
 
-    The "**proof_of_concept**" workspace displays the “**All Java Applications**” page which shows the recommendations for the workspace.
+    The **proof\_of\_concept** workspace displays the **All Java Applications** page which shows the recommendations for the workspace.
 
     There is a single application called **plantsbywebsphereee6.ear**. 
     
-    By default, "WebSphere Liberty" is selected as a modernization target. All the information provided assumes that this application will be modernized to WebSphere Liberty.
+    By default, **WebSphere Liberty** is selected as a modernization target. All the information provided assumes that this application will be modernized to WebSphere Liberty.
 
     ![A screenshot of a computer Description automatically generated](./images/media/image19.png)
 
@@ -267,7 +272,7 @@ A **workspace** is a designated area that will house the migration recommendatio
    
 ![A screenshot of a computer Description automatically generated](./images/media/image20.png)
 
- ***How is this application ready for deployment when it shows 4 issues?***
+ **How is this application ready for deployment when it shows 4 issues?**
  
  In this case, the application has four **Informational** issues.
  
@@ -305,7 +310,7 @@ A **workspace** is a designated area that will house the migration recommendatio
 
 3.  Download the migration bundle by clicking the **Download** button in the bottom right. 
 
-    A zip file named “**plantsbywebsphereee6.ear_migrationBundle.zip**” will download to your **Download** folder.
+    A zip file named “**plantsbywebsphereee6.ear_migrationBundle.zip**” will download to your **Downloads** folder.
 
     ![A screenshot of a computer Description automatically generated](./images/media/image24.png)
 
@@ -322,13 +327,13 @@ We will go through a step-by-step process of using the Transformation Advisor mi
 
 # Part 2: Deploy PlantsByWebSphere app to a locally running WebSphere Liberty    
 
-In this step, you will create a new Liberty server to run the PlantsByWebSphere application.
+In this step, you will create a new Liberty server to run the **PlantsByWebSphere** application.
 
 Then, you will review the migration bundle to see what files you need to add, and use the provided **server.xml** Liberty configuration file. This file is used to configure Liberty by providing values for ports, security, context routes and by providing application-specific configuration. 
 
 ### 2.1   Create a local Liberty Server
 
-1.  From a **Terminal** window, create a new local WebSphere Liberty server named **pbwserver**.
+1.  From the **terminal** window, create a new local WebSphere Liberty server named **pbwserver**.
 
         /home/techzone/wlp/bin/server create pbwserver
 
@@ -338,7 +343,7 @@ Then, you will review the migration bundle to see what files you need to add, an
     Server pbwserver created.
     ```
 
-2.  From the **Terminal** window, start the local WebSphere Liberty server.
+2.  From the **terminal** window, start the local WebSphere Liberty server.
 
         /home/techzone/wlp/bin/server start pbwserver
 
@@ -350,12 +355,12 @@ Then, you will review the migration bundle to see what files you need to add, an
     Server pbwserver started with process ID #####
     ```
 
-3.  Confirm the local WebSphere Liberty server is running. Open the web browser, open a new browser tab. Then go to: **http://localhost:9080**
+3.  Confirm the local WebSphere Liberty server is running. Go back to the web browser, open a new browser tab. Then go to: **http://localhost:9080**.
+
+    The Liberty Home page is displayed.
 
     ![A screenshot of a computer Description automatically generated](./images/media/image25.png)
 
-
-    
 
 ### 2.1.3 Review the placeholder files in the migration bundle
 
@@ -365,9 +370,9 @@ In this section, you will review the migration bundle to see what files need to 
 
     The placeholder files are convenient references to let you know which files you will need to copy to the **Liberty server**.
  
-    *Note: You will fully populate the migration bundle in later steps*.
+    **Note: You will fully populate the migration bundle in later steps**.
 
-    a.  From the **Terminal window**, list the placeholder files in the migration bundle.
+    a.  From the **terminal window**, list the placeholder files in the migration bundle.
 
         unzip -l /home/techzone/Downloads/plantsbywebsphereee6.ear\_migrationBundle.zip | grep placeholder
  
@@ -377,7 +382,6 @@ In this section, you will review the migration bundle to see what files need to 
 
     - The **src/main/liberty/lib** directory contains the placeholder files for the DB2 database libraries required by the application. This is a reminder that you need to copy the DB2 libraries to the Liberty server.
 
-    <br/>
 
 ### 2.1.4   Configure the Liberty server for PlantsByWebSphere
 
@@ -385,14 +389,14 @@ In this section, extract the migration bundle that you downloaded. Then, copy th
 
   - Extract the **migration bundle** to a new directory
 
-  - Copy the **DB2 libraries** to the directory defined in the "DB2 driver configuration" in the server.xml file.
+  - Copy the **DB2 libraries** to the directory defined in the **DB2 driver configuration** in the **server.xml** file.
 
-  - Copy the **PlantsByWebSphere EAR** file to the “apps” directory of the Liberty server
+  - Copy the **PlantsByWebSphere EAR** file to the **apps** directory of the Liberty server
 
-  - Copy the **server.xml** file from the migration bundle to the Liberty server, replacing the default server.xml file
+  - Copy the **server.xml** file from the migration bundle to the Liberty server, replacing the default **server.xml** file
 
 
-1. Extract the migration bundle that you downloaded
+1. Extract the migration bundle that you downloaded using the following commands:
 
         mkdir /home/techzone/Student/labs/appmod/migration-bundle
 
@@ -406,12 +410,12 @@ In this section, extract the migration bundle that you downloaded. Then, copy th
 
         ls -l        
 
-    The migration bundle contains the files to build and deploy the PlantsByWebSphere application to Liberty, in containers, and on OpenShift.     
+    The migration bundle contains the files to build and deploy the **PlantsByWebSphere** application to Liberty, in containers, and on OpenShift.     
 
     ![](./images/media/migbundle-dirs.png)
  
 
-3.	Copy the PlantsByWebSPhere application binary file into the **apps** location in Liberty
+3.	Copy the **PlantsByWebSPhere** application binary file into the **apps** location in Liberty
 
         cp /home/techzone/appmod-pot-labfiles/labs/RuntimeModernization/plantsbywebsphereee6.ear /home/techzone/wlp/usr/servers/pbwserver/apps
 
@@ -432,12 +436,11 @@ In this section, extract the migration bundle that you downloaded. Then, copy th
 
         cp /home/techzone/Student/labs/appmod/migration-bundle/src/main/liberty/config/server.xml /home/techzone/wlp/usr/servers/pbwserver 
 
-    ___
 
     Now that the PlantsByWebSphere binary and its configuration are added to the Liberty server, the application is ready to be run form the web browser.     
-    ___
 
-7.  Run the PlantsByWebSphere application from the browser.
+
+7.  Run the **PlantsByWebSphere** application from the browser.
 
         http://localhost:9080/PlantsByWebSphere
  
@@ -445,25 +448,19 @@ In this section, extract the migration bundle that you downloaded. Then, copy th
  
     ![A website page of a garden Description automatically generated](./images/media/image36.png)
 
-8.  Attempt to click on any of the tabs: “**Flowers**”, **Fruits & Vegetables**”, or “**Trees**”.
+8.  Attempt to click on any of the tabs: **Flowers**, **Fruits & Vegetables**, or **Trees**, you should see the application pages displaying a catalog of items in their respective category, which are rereived from the application database, but instead you see an exception error like this:
 
-    ___
-
-    **Note the exception.** This is an expected erorr. The issue is in the JPA persistence (Database access). A user is not defined, and therefore authentication to the database failed.
- 
     ![A screen shot of a computer Description automatically generated](./images/media/image37.png)
- 
-    ___
 
-    These pages should display a catalog of items in their respective category, which are rereived from the application database. 
+
+    **Note** This is an expected erorr. The issue is in the JPA persistence (Database access). A user is not defined, and therefore authentication to the database failed.
 
     **So what happened?** 
     
     Transformation Advisor does not collect any **sensitive data** for the application server.  This means the application-specific configuration information in the **server.xml** file has not been set. In this case, the **username** and **password** to access the database are missing.
 
-    In the next section, you will review the server.xml file and add the sensitive data required to access the application database.  
+    In the next section, you will review the **server.xml** file and add the sensitive data required to access the application database.  
 
-    <br/>
 
 ### 2.1.5   Review the server.xml file
 
@@ -471,7 +468,7 @@ Now you will review the **server.xml** file and set the necessary configuration 
 
 The **server.xml** file defines a set of **features** that the application requires. By importing only the necessary **features** to support the application’s API needs, the footprint of the deployed application and Liberty server is kept as small as possible.
 
-1. Review the server.xml file
+1. Review the **server.xml** file
 
     Using the **gedit** editor in a **Terminal** window, open the **server.xml** file located in the Liberty server
 
@@ -483,7 +480,7 @@ The **server.xml** file defines a set of **features** that the application requi
 
     - **Section 2:** Defines the **resources** required to access the database
 
-      - The **authdata** defies the BD2 user and password that is used by the datasources. These refer to variables that are defined in the server.xml file.
+      - The **authdata** defies the BD2 user and password that is used by the datasources. These refer to variables that are defined in the **server.xml** file.
 
       - The **jdbc** driver defines the required libraries. These are the libraries you copied into this location via the script
 
@@ -505,17 +502,17 @@ The **server.xml** file defines a set of **features** that the application requi
       ![A screenshot of a computer program Description automatically generated](./images/media/image42.png)
 
 
-2.  The reason that the **PlantsByWebSphere** application retuned an “Exception” is because the values for the **sensitive variables** has not been set. 
+    The reason that the **PlantsByWebSphere** application retuned an **Exception** is because the values for the **sensitive variables** has not been set. 
   
     ![](./images/media/image43.png)
 
-    Next, you will update the server.xml to include the credentials required to access the application database. 
+    Next, you will update the **server.xml** to include the credentials required to access the application database. 
 
 
 ### 2.1.6   Update the server.xml and retest the PlantsByWebSphere application
 
 
-1. From a Terminal window, stop the Liberty server named **pbwserver** with the following command:
+1. Open a new terminal window, stop the Liberty server named **pbwserver** with the following command:
 
         /home/techzone/wlp/bin/server stop pbwserver
 
@@ -529,10 +526,10 @@ The **server.xml** file defines a set of **features** that the application requi
 
      ![](./images/media/image44.png)
     
-   d. **Save** and **close** the **server.xml** in the editor
+   d. **Save** and **close** the **server.xml** in the editor.
 
 
-3. From a Terminal window, start the Liberty server named **pbwserver** with the following command:
+3. From the terminal window, start the Liberty server named **pbwserver** with the following command:
 
         /home/techzone/wlp/bin/server start pbwserver
 
@@ -547,14 +544,14 @@ The **server.xml** file defines a set of **features** that the application requi
     ![A screenshot of a computer Description automatically generated](./images/media/image45.png)
 
 
-3. From a **Terminal** window, stop the Liberty server named **pbwserver** with the following command:
+3. From the **terminal** window, stop the Liberty server named **pbwserver** with the following command:
 
         /home/techzone/wlp/bin/server stop pbwserver
 
 
 ### Checkpoint
 
-At this point in the lab, you have successfully demonstrated the PlantsByWebSphere application runs successfully in WebSPhere Lberty on a local VM. 
+At this point in the lab, you have successfully demonstrated the **PlantsByWebSphere** application runs successfully in WebSPhere Lberty on a local VM. 
 
 In the next sections, you will deploy the PlantsByWebSphere application to containers and Red Hat OpenShift. 
 
@@ -565,11 +562,11 @@ In the next sections, you will deploy the PlantsByWebSphere application to conta
 
 In the previous section, you used the **server.xml** to get the  application running on a **local Liberty instance**. This was to show you how the Transformation Advisor **server.xml** file is used. If you are moving to Liberty in VMs as your new runtime, then you are done! 
 
-However. if containers are to be your final destination, this section explores the Transformation Advisor migration bundle artifacts that accelerate application deployment to Lberty in containers. 
+However, if containers are to be your final destination, this section explores the Transformation Advisor migration bundle artifacts that accelerate application deployment to Lberty in containers. 
 
 In the case of **Simple** applications, it is not necessary to carry out a separate step of deploying to a local Liberty instance at all. Instead, by using the Transformation Advisor migration bundle, you can deploy your application to **Liberty running in a container** all in one go. 
 
-This is what we will do now.
+This is what you will do now.
 
 
 1.	Add the PlantsByWebSphere binary file to your migration bundle, and remove the placeholder.
@@ -585,19 +582,18 @@ This is what we will do now.
 
         rm /home/techzone/Student/labs/appmod/migration-bundle/src/main/liberty/lib/*.placeholder
 
-3.	Update the server.xml file to remove the TLS configuration which is not used. 
+3.	Update the **server.xml** file to remove the TLS configuration which is not used. 
 
         cp /home/techzone/appmod-pot-labfiles/labs/RuntimeModernization/lab_2161-1/deploy-config-updates/apps-pbw/server.xml /home/techzone/Student/labs/appmod/migration-bundle/src/main/liberty/config 
 
 
-4.  The **migration bundle** is ready to be used to generate an image of your application running on WebSphere Liberty. To do this, we will use the **Containerfile** that comes with the migration bundle.
+4.  Explore the **Containerfile** in the migration bundle
 
-    ![A screenshot of a computer Description automatically generated](./images/media/image49a.png)
+    Now the **migration bundle** is ready to be used to generate an image of your application running on WebSphere Liberty. You will use the **Containerfile** that comes with the migration bundle to create the image
 
-    a. Explore the Containerfile in the migration bundle
+    a. To access the **Containerfile** in the migration bundle, run the following command:
 
         gedit /home/techzone/Student/labs/appmod/migration-bundle/Containerfile
- 
  
     - The **FROM** statements in the **Containerfile** pull in the following two images. 
      
@@ -621,14 +617,13 @@ This is what we will do now.
 
     b. Close the **gedit** editor. **DO NOT SAVE ANY CHNAGES TO THE FILE!** 
 
-    <br/>
 
 
 ### 3.2 Setup, build and run PlantsByWebSphere in a local container
 
-In this section, you will build and run the PlantsByWebSphere application in a local container.
+In this section, you will build and run the **PlantsByWebSphere** application in a local container.
 
-1.	Build the container image from the migration bundle using docker
+1.	Build the container image from the migration bundle using docker.
 
         cd /home/techzone/Student/labs/appmod/migration-bundle
 
@@ -679,18 +674,19 @@ In this section, you will build and run the PlantsByWebSphere application in a l
      ![A screenshot of a web page Description automatically generated](./images/media/image61.png)
  
     
-    Attempt to click on any of the tabs: “**Flowers**”, **Fruits & Vegetables**”, or “**Trees**”.
+    Attempt to click on any of the tabs: **Flowers**, **Fruits & Vegetables**, or **Trees**.
 
     ___
 
-    **Note the exception.** This is an expected erorr. The issue is in the JPA persistence (Database access). A user is not defined, and therefore authentication to the database failed.
+    **Note** As we see it before, this is an expected erorr. The issue is in the JPA persistence (Database access). A user is not defined, and therefore authentication to the database failed.
  
     ![](./images/media/pbw-container-db-error.png)
  
-    The error is because we are using the unchanged server.xml file that came with the migration bundle. 
+    The error is because we are using the unchanged **server.xml** file that came with the migration bundle. 
     
     As outlined already, Transformation Advisor does not collect any sensitive data so the application specific configuration information has not been set. 
-    ___
+
+___
 
 **Considerations & recommendations:**
 
@@ -727,15 +723,13 @@ The structure of the kustomize folder is as follows.
 
   2.	**overlays** contains all your different deployment configurations. In this case, only a single deployment has been created for your **dev** systems. The **secret** file will contain all your application-specific **sensitive data** that will be created as secrets in OpenShift.
 
-  > ![](./images/media/image64a.png)
+    ![](./images/media/image64a.png)
  
-___
 
 **Note:** In the next section we will use this kustomize structure to deploy your application image.
 
 Further information on **kustomize** can be found at <http://kustomize.io>
     
-___
 
 
 ## 4 Deploy to OpenShift with config
@@ -744,7 +738,7 @@ You have now created a a container image without any application specific config
 
 ### 4.1 Update the Kustomize structure to move the configmap configuration to the overlays folder
 
-It is common to have different application configuration between deployments such as **dev** and **staging**. In this lab, we use different DB2 application databases between the two configurations. For this reason , we want the configMap to be located in the Kustomize **overlays** folder, rather than the **base** where it is placed, by default, in the Transformation Advisor migration bundle. 
+It is common to have different application configuration between deployments such as **dev** and **staging**. In this lab, we use different DB2 application databases between the two configurations. For this reason, we want the configMap to be located in the Kustomize **overlays** folder, rather than the **base** where it is placed, by default, in the Transformation Advisor migration bundle. 
 
 For the lab, we have provided the updated file structure for you. You just need to run the commands below to update the migration bundle. 
 
@@ -772,7 +766,7 @@ For the lab, we have provided the updated file structure for you. You just need 
 
 Recall, the container image does not have the application configuration baked in. 
 
-You will make the following updates to the configuration YAML files in the migration bundle for the PlantsByWebSphere application deployment to OpenShift. 
+You will make the following updates to the configuration YAML files in the migration bundle for the **PlantsByWebSphere** application deployment to OpenShift. 
 
   -  Update the **overays/dev/plantsbywebsphereee6-secret.yaml** file
      -  Add the sensitive-data to the **secret** YAML file
@@ -801,7 +795,7 @@ ___
     ![](./images/media/secret-yaml-update.png)
 
 
-    a. `How did we encode the values?` 
+    **Note** **How did we encode the values?**
     
     We updated the values in the YAML file with the sensitive data by  **Base64 encoding** the values as illustrated below.
  
@@ -865,7 +859,7 @@ To deploy the PlantsByWebSphere application to OpenShift, you must perform the f
 
 1. Tag the container image 
 
-    a. Go to a **Terminal**window.   
+    a. Go to a **terminal** window.   
         
         
     b. Tag the container image using the following docker command:
@@ -884,7 +878,7 @@ To deploy the PlantsByWebSphere application to OpenShift, you must perform the f
 
         oc login -u ocadmin -p ibmrhocp
 
-4. Create a new project where you will dpeloy the application 
+4. Create a new project named **apps-pbw** where you will dpeloy the application 
 
         oc new-project apps-pbw
 
@@ -897,7 +891,7 @@ To deploy the PlantsByWebSphere application to OpenShift, you must perform the f
 
         docker push default-route-openshift-image-registry.apps.ocp.ibm.edu/apps-pbw/pbw-app:1.0        
 
-In previous steps, you configured the sensitive data that is needed, accepted the license, pointed to the image that is needed to pull,  and logged into OpenShift. Now, with a single command, you can deploy to OpenShift and configure the image. 
+In previous steps, you configured the sensitive data that is needed, accepted the license, pointed to the image that is needed to pull, and logged into OpenShift. Now, with a single command, you can deploy to OpenShift and configure the image. 
 
 You must specify which overlay will provide the configuration (dev in this case).
 
@@ -951,11 +945,11 @@ In this section, you will take a look at the **WebSphere Liberty Operator** in t
 
 1.  Login to OpenShift console
 
-    a.  Open a new tab in the web browser
+    a.  Open a new tab in the web browser, click the **OpenShift Console** bookmark on the bookmark toolbar and click **Log in** with default login credentials.
+    
+    ![A screenshot of a computer Description automatically generated](./images/media/image80a.png)
 
-    b.  Click on the **OpenShift Console** bookmark on the bookmark toolbar
-
-    c.  Login credentials:
+    The login credentials are:
 
     - Username: **ocadmin**
 
@@ -976,11 +970,11 @@ In this section, you will take a look at the **WebSphere Liberty Operator** in t
 
 3. View the **WebSphereLibertyApplication Deployment**
 
-    a.  Click on the tab called **WebSphereLibertyApplication**
+    a.  Click the tab called **WebSphereLibertyApplication**
 
     ![A green circle with text Description automatically generated](./images/media/image87a.png)
 
-    b. You will see the **plantsbywebsphereee6** application listed in the ‘dev’ namespace
+    You see the **plantsbywebsphereee6** application listed in the **apps-pbw** namespace
 
     b. Click on the link called **plantsbywebsphereee6** under the **Name** column
 
@@ -994,7 +988,7 @@ In this section, you will take a look at the **WebSphere Liberty Operator** in t
 
     ![A screenshot of a computer Description automatically generated](./images/media/image90a.png)
 
-    e. The PlantsByWebSphere deployment has one **pod** running
+    The PlantsByWebSphere deployment has one **pod** running
 
     ![A screenshot of a computer Description automatically generated](./images/media/image91a.png)
 
@@ -1019,11 +1013,11 @@ In this section, you will take a look at the **WebSphere Liberty Operator** in t
 
     ![A screenshot of a computer Description automatically generated](./images/media/image94a.png)
 
-    e.  The **Welcome to Liberty** page is displayed in a new Browser tab. 
+    The **Welcome to Liberty** page is displayed in a new Browser tab. 
 
     ![A screenshot of a computer Description automatically generated](./images/media/image95.png)
 
-    f.  Append the context root ‘**PlantsByWebSphere’** to access the PlantsByWebSphere application
+    e.  Append the context root **PlantsByWebSphere** to access the PlantsByWebSphere application
 
         http://plantsbywebsphereee6-apps-pbw.apps.ocp.ibm.edu/PlantsByWebSphere
 
@@ -1048,7 +1042,7 @@ In this section, we will deploy the same application again with a new configurat
         cp  /home/techzone/appmod-pot-labfiles/labs/RuntimeModernization/lab_2161-1/deploy-config-updates/apps-pbw/plantsbywebsphereee6-configmap-staging.yaml  /home/techzone/Student/labs/appmod/migration-bundle/deploy/kustomize/overlays/staging/plantsbywebsphereee6-configmap.yaml
 
 
-    The update to the **plantsbywebsphereee6-configmap.yaml** in the **overays/staging** directory is now complete. The database **serverName** for the **staging** configuration has been added to the configmap yaml file, as illustrated below. 
+    The update to the **plantsbywebsphereee6-configmap.yaml** in the **overays/staging** directory is now complete. The database **serverName** for the **staging** configuration has been added to the **configmap yaml** file, as illustrated below. 
 
     ![](./images/media/staging-db-servername.png)
 
@@ -1066,8 +1060,8 @@ In this section, we will deploy the same application again with a new configurat
         webspherelibertyapplication.liberty.websphere.ibm.com/plantsbywebsphereee6 unchanged
 
 4. Restart the PlantsByWebSphere application, to work around a bug in the PlantsByWebSphere app.
-
-        oc delete -n apps-pbw pod $(oc get pod -o template –template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+        
+        oc delete -n apps-pbw pod $(oc get pod -o template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
 
 5. Ensure the pod has restarted
 
@@ -1098,7 +1092,7 @@ In this section, we will deploy the same application again with a new configurat
 
     ![](./images/media/staging-db-trees.png)
 
-    ___
+    
     For reference, this catalog of trees was retrieved from the **dev** database. Notice the name of the trees are different. 
  
     ![A screenshot of a computer Description automatically generated](./images/media/image79.png)
@@ -1106,12 +1100,11 @@ In this section, we will deploy the same application again with a new configurat
  
 # Summary
 
-___
+
 **Congratulations!**
 
 **You have successfully completed the core learning objectives in the lab**
 
-___
 
 In this lab, you learned how to deploy applications to WebSphere Liberty using the WebSphere Liberty Operator and the deployment artifacts produced by Transformation Advisor in its migration bundle.
 
@@ -1121,7 +1114,7 @@ You explored the options for deployment:
   - Liberty as an image running in local container
   - Liberty as an image running in OpenShift.
 
-You learned how to easily configure deployments to OpenShift to allow the same immutable image to be deployed for different configurations such as ‘dev’ and ‘staging’ environment deployments.
+You learned how to easily configure deployments to OpenShift to allow the same immutable image to be deployed for different configurations such as **dev** and **staging** environment deployments.
 
 You learned about some of the practical ways you can secure your configuration data.
 
