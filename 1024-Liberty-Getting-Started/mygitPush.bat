@@ -1,1 +1,0 @@
-..\gitPush_Liberty.bat

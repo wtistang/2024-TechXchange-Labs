@@ -282,7 +282,7 @@ A **workspace** is a designated area that will house the migration recommendatio
 
 1.  We are now ready to review the **migration plan** for this application. 
 
-    a. Click on the **Migration plan** link at the end of the row of the **plantsbywebsphereee6.ear** application.
+    a. Click the **Migration plan** link at the end of the row of the **plantsbywebsphereee6.ear** application.
 
     ![A screenshot of a computer Description automatically generated](./images/media/image21.png)
 
@@ -448,7 +448,7 @@ In this section, extract the migration bundle that you downloaded. Then, copy th
  
     ![A website page of a garden Description automatically generated](./images/media/image36.png)
 
-8.  Attempt to click on any of the tabs: **Flowers**, **Fruits & Vegetables**, or **Trees**, you should see the application pages displaying a catalog of items in their respective category, which are rereived from the application database, but instead you see an exception error like this:
+8.  Attempt to click any of the tabs: **Flowers**, **Fruits & Vegetables**, or **Trees**, you should see the application pages displaying a catalog of items in their respective category, which are rereived from the application database, but instead you see an exception error like this:
 
     ![A screen shot of a computer Description automatically generated](./images/media/image37.png)
 
@@ -674,7 +674,7 @@ In this section, you will build and run the **PlantsByWebSphere** application in
      ![A screenshot of a web page Description automatically generated](./images/media/image61.png)
  
     
-    Attempt to click on any of the tabs: **Flowers**, **Fruits & Vegetables**, or **Trees**.
+    Attempt to click any of the tabs: **Flowers**, **Fruits & Vegetables**, or **Trees**.
 
     ___
 
@@ -931,7 +931,7 @@ You must specify which overlay will provide the configuration (dev in this case)
 
     ![A website page of a garden Description automatically generated](./images/media/image78a.png)
 
-11. Click on the **Trees** category and view the trees that are loaded in the **dev** database.
+11. Click the **Trees** category and view the trees that are loaded in the **dev** database.
 
     This catalog of trees was retrieved from the DB2 database in the **dev** configuration.
  
@@ -957,13 +957,13 @@ In this section, you will take a look at the **WebSphere Liberty Operator** in t
 
 2.  View the **IBM WebSphere Liberty Operator**
 
-    a.  Click on **Operators > Installed Operators** in the left-hand menu
+    a.  Click **Operators > Installed Operators** in the left-hand menu
 
     b. Select **apps-pbw** in the **Project** filter
 
     c. Type **Liberty** in the **Name** filter
 
-    d.  Click on **IBM WebSphere Liberty**
+    d.  Click **IBM WebSphere Liberty**
 
     ![A screenshot of a computer Description automatically generated](./images/media/installed-operators-apps-pbw.png)
 
@@ -976,7 +976,7 @@ In this section, you will take a look at the **WebSphere Liberty Operator** in t
 
     You see the **plantsbywebsphereee6** application listed in the **apps-pbw** namespace
 
-    b. Click on the link called **plantsbywebsphereee6** under the **Name** column
+    b. Click the link called **plantsbywebsphereee6** under the **Name** column
 
     ![A screenshot of a computer Description automatically generated](./images/media/image88a.png)
 
@@ -1007,7 +1007,7 @@ In this section, you will take a look at the **WebSphere Liberty Operator** in t
 
     ![A screenshot of a computer Description automatically generated](./images/media/image93a.png)
 
-    d.  Click on the **Location** link for the route
+    d.  Click the **Location** link for the route
 
          http://plantsbywebsphereee6-apps-pbw.apps.ocp.ibm.edu
 
@@ -1083,12 +1083,12 @@ In this section, we will deploy the same application again with a new configurat
     ![A website page of a garden Description automatically generated](./images/media/image78a.png)
 
 
-    a. Click on the **Home** link on the application main page
+    a. Click the **Home** link on the application main page
 
     ![](./images/media/home-link.png)
 
 
-    b. Click on the **Trees** category and view the trees that are loaded in the **staging** database.
+    b. Click the **Trees** category and view the trees that are loaded in the **staging** database.
 
     ![](./images/media/staging-db-trees.png)
 
@@ -1218,7 +1218,7 @@ This workspace has only a single application name **plantsbywebsphereee6.ear**. 
  
    - Complex complexity value typically represents less than 1% of applications.
 
-4. Click on **plantsByWebSphereee6.ear** which will expand the analysis
+4. Click **plantsByWebSphereee6.ear** which will expand the analysis
 
     ![A screenshot of a computer Description automatically generated](./images/media/image108.png)
 
@@ -1251,7 +1251,7 @@ This workspace has only a single application name **plantsbywebsphereee6.ear**. 
 
     The **Detailed Migration Analysis Report** does a deep dive on the preferred migration target to help you understand any migration issues, like deprecated or removed APIs, Java SE version differences, and Java EE behavioral differences.
 
-    a.  Click on the **Analysis report** link. 
+    a.  Click the **Analysis report** link. 
 
     ![A screenshot of a computer Description automatically generated](./images/media/image109.png)
 
@@ -1270,7 +1270,7 @@ This workspace has only a single application name **plantsbywebsphereee6.ear**. 
  
     You may use the binary scanner with the **--ta** option if you want to assess the modernization effort to newer versions Java, Jave EE, or Jakarta EE. Running the binary scanner with the **-ta** option produces an archive file that can be loaded into Transformation Advisor for analysis.
 
-    d.  Click on the **Information** label, to review the details of this item.
+    d.  Click the **Information** label, to review the details of this item.
 
     ![A screenshot of a computer Description automatically generated](./images/media/image112.png)
  
@@ -1281,7 +1281,7 @@ This workspace has only a single application name **plantsbywebsphereee6.ear**. 
     ![A screenshot of a computer Description automatically generated](./images/media/image113.png)
 
 
-6.  Return to the **Cloud Transformation Advisor** browser tab that shows the **plantsbywebsphereee6.ear details** page. Then click on **Inventory Report**, which will open in a new browser tab.
+6.  Return to the **Cloud Transformation Advisor** browser tab that shows the **plantsbywebsphereee6.ear details** page. Then click **Inventory Report**, which will open in a new browser tab.
 
     ![A screenshot of a computer Description automatically generated](./images/media/image114.png)
 
@@ -1299,7 +1299,7 @@ This workspace has only a single application name **plantsbywebsphereee6.ear**. 
 
     ![A screenshot of a computer Description automatically generated](./images/media/image116.png)
 
-    d.  Return to the **Cloud Transformation Advisor** browser tab that shows the **plantsbywebsphereee6.ear details** page. Then click on **Technology report**, which will open in a new browser tab.
+    d.  Return to the **Cloud Transformation Advisor** browser tab that shows the **plantsbywebsphereee6.ear details** page. Then click **Technology report**, which will open in a new browser tab.
 
     The **Technology report** provides details on which editions of Liberty support the technologies used by the applications.
  

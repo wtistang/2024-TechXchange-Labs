@@ -871,8 +871,8 @@ However, installing the Instana agent is simple. Using the Instana UI, you can s
 
 2. Login to the Instana UI
 
-    a.  From the web browser, open a new window and click the `Instana
-    bookmark` to access Instana page.
+    a.  From the web browser, open a new window and click the **Instana**
+    bookmark to access Instana page.
 
     ![Graphical user interface, application, Word Description
  automatically generated](./lab2-media/media/image21.png)
@@ -885,9 +885,9 @@ However, installing the Instana agent is simple. Using the Instana UI, you can s
 
 3.  Verify the Instana agent installation
 
-    a. Click on the `Infrastructure` icon on the left navigation bar. 
+    a. Click the **Infrastructure** icon on the left navigation bar. 
     
-    You will see the `WebSphere` infrastructure zone that we configured in the Instana agent for this lab. 
+    You will see the **WebSphere** infrastructure zone that we configured in the Instana agent for this lab. 
     
     This infrastructure zone is configured for montoring WebSphere, using Instana's out of the box capabilities. 
 
@@ -1051,9 +1051,9 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
       <br/>    
 
 
-4.  In the WebSphere Automation UI, click on the **`Health`** icon.
+4.  In the WebSphere Automation UI, click the **Health** icon.
 
-    The `Health` section is where you view and analyze server health problems. 
+    The **Health** section is where you view and analyze server health problems. 
 
     ![Graphical user interface, application, Teams Description
  automatically generated](./lab2-media/media/image55.png)

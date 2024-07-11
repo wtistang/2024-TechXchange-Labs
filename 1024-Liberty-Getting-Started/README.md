@@ -208,7 +208,7 @@ Now you will use Visual Studio Code to see what has been generated as part of th
 
     Visual Studio Code UI will be opened.
 
-2. Click on **Yes, I trust the authors** to continue.
+2. Click **Yes, I trust the authors** to continue.
 
     <kbd>![image023](./images/media/image023.png)</kbd>
 
@@ -244,9 +244,9 @@ Now you will use Visual Studio Code to see what has been generated as part of th
 
     b. Finally close the **pom.xml** file.
 
-5. Review the generated Liberty configuration
+5. Review the generated Liberty configuration.
 
-    a.  Open **src >  main >liberty > config > server.xml** to see the Liberty configuration.
+    a.  Open the **src >  main >liberty > config > server.xml** to see the Liberty configuration.
 
     <kbd>![image028](./images/media/image028.png)</kbd>
 
@@ -265,7 +265,7 @@ The **simpleweb** application will not require the full **Jakarta EE 10** standa
 
 As best practice to optimize the footprint of the application runtime regarding memory and disk space and limit the number of potential vulnerabilities, you should define only the features that are required by the application. In this case, you are ging to replace the **jakartaee-10** feature with an appropriate servlet feature. 
 
-1. In the Visual Studio Code editor for **server.xml**, scroll up to the feature section.
+1. In the Visual Studio Code editor, open the **server.xml**, and scroll up to the feature section.
 
 2. Delete the lines **\<feature>jakartaee-10.0\</feature>** and **\< feature>MicroProfile-6.1\</feature>**.
     Your **featureManager** section should now look like this:
@@ -281,7 +281,7 @@ As best practice to optimize the footprint of the application runtime regarding 
     <tr class="odd">
     <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
     <td>
-    <p>You might have to click on the arrow right to feature to get the description.
+    <p>You might have to click the arrow right to feature to get the description.
     </p></td>
     </tr>
     </tbody>
@@ -335,7 +335,7 @@ In the lab environment, the Liberty tools plugin has been installed into Visual 
 
     <kbd>![image040](./images/media/image040.png)</kbd>
 
-2. Right-click on **simpleweb** and then **start** to start the server in dev mode.
+2. Right-click **simpleweb** and then **start** to start the server in dev mode.
 
     <kbd>![image041](./images/media/image041.png)</kbd>
 
@@ -356,7 +356,7 @@ In the lab environment, the Liberty tools plugin has been installed into Visual 
     <tr class="odd">
     <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
     <td>
-    <p>If you get a pop-up with <strong>Authentication required</strong>, enter the password <strong>IBMDem0s!</strong> and click on <strong>Unlock</strong>.
+    <p>If you get a pop-up with <strong>Authentication required</strong>, enter the password <strong>IBMDem0s!</strong> and click <strong>Unlock</strong>.
     </p></td>
     </tr>
     </tbody>
@@ -612,7 +612,7 @@ Let’s do a short excurse about Liberty dynamic updates. You will use Visual St
 
     <kbd>![image069](./images/media/image069.png)</kbd>
 
-2. Visual Studio Code opens. Click on **Yes**, if you are asked to trust the author.
+2. Visual Studio Code opens. Click **Yes**, if you are asked to trust the author.
 
     <kbd>![image070](./images/media/image070.png)</kbd>
 
@@ -851,13 +851,13 @@ You will now use **includes** to structure the server configuration.
 
     As you can see, you could define the include file as optional, so Liberty would not throw an error if the include file is missing. 
 
-8. Click on **onConflict** to see the available attributes for that options. 
+8. Click **onConflict** to see the available attributes for that options. 
 
     <kbd>![image100](./images/media/image100.png)</kbd>
 
     If you want to make sure, that settings in the server.xml cannot be overridden by included files, select **IGNORE**, otherwise use **MERGE** or **REPLACE**. 
     
-9. Click on **MERGE** and your include statement should look like this:
+9. Click **MERGE** and your include statement should look like this:
 
         <include location="application-config.xml" onConflict="MERGE"/>
 
@@ -967,7 +967,7 @@ Right now, you are not able to access Liberty via HTTPS. While the HTTPS port 94
 
     <kbd>![image109](./images/media/image109.png)</kbd>
 
-10. Click on **Advanced**, then scroll down and click on **"Accept the Risk and Continue"**.
+10. Click **Advanced**, then scroll down and click **Accept the Risk and Continue**.
 
     <kbd>![image110](./images/media/image110.png)</kbd>
 
@@ -1264,7 +1264,7 @@ If you do not create a keystore but enable SSL, Liberty will create a keystore w
 
 2. Verify that the server is accessible via HTTPs. Switch to the browser and access the web application via the URL **https://localhost:9443**. 
     
-    As before, you will get a warning that your connection is not secure. Click on **Advanced**, scroll down and click on **"Accept the Risk and Continue"**. Then you should be able to access the application.
+    As before, you will get a warning that your connection is not secure. Click **Advanced**, scroll down and click **"Accept the Risk and Continue"**. Then you should be able to access the application.
 
     <kbd>![image133](./images/media/image133.png)</kbd>
 
@@ -1647,7 +1647,7 @@ The Liberty **AdminCenter** can be used to monitor the status of the Liberty ser
     <kbd>![image169](./images/media/image169.png)</kbd>
     The Admin Center Toolbox is displayed.
 
-7. Click on **Explore** to explore the Liberty status, the applications as well monitoring data and configuration.
+7. Click **Explore** to explore the Liberty status, the applications as well monitoring data and configuration.
 
     <kbd>![image170](./images/media/image170.png)</kbd>
 
@@ -1672,7 +1672,7 @@ The Liberty **AdminCenter** can be used to monitor the status of the Liberty ser
     <kbd>![image174](./images/media/image174.png)</kbd>
 
     You can see a warning that remote file access is not configured. You can ignore that as you will not configure Liberty via AdminCenter. <br>
-    But you could click on the link to see the configuration in design and source view.
+    But you could click the link to see the configuration in design and source view.
 
 12. Select to log out as admin.
 
@@ -1682,7 +1682,7 @@ The Liberty **AdminCenter** can be used to monitor the status of the Liberty ser
 
     <kbd>![image176](./images/media/image176.png)</kbd>
 
-14. Click on **Explore**, then select the tab **Applications**. Try to click on the twisty next to the **simpleweb** application and you can see that you are not auithorized to start or stop an application.
+14. Click **Explore**, then select the tab **Applications**. Try to click the twisty next to the **simpleweb** application and you can see that you are not auithorized to start or stop an application.
 
     <kbd>![image177](./images/media/image177.png)</kbd>
 
@@ -1721,7 +1721,7 @@ The generic JVM arguments are used to configure and adjust how the JVM executes.
 
     <kbd>![image176](./images/media/image176.png)</kbd>
 
-4. Click on **Explore**, then select **Monitor**. Take a look at the dashboard and you can see that the Used Heap Memory Max is now 500 MB as defined in jvm.options.
+4. Click **Explore**, then select **Monitor**. Take a look at the dashboard and you can see that the Used Heap Memory Max is now 500 MB as defined in jvm.options.
 
     <kbd>![image180](./images/media/image180.png)</kbd>  
 

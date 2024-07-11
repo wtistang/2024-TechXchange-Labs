@@ -655,7 +655,7 @@ the collective.
     ![A screenshot of a website Description automatically generated with
  low confidence](./images/media/image38.png)
  
-    b. In the application, click on the “**Flowers**” tab to view the
+    b. In the application, click the “**Flowers**” tab to view the
  catalog of flowers. This action retrieves catalog details from the
  application DB2 database.
  
@@ -930,7 +930,7 @@ lost, such as items in a shopping cart, or login cookies, etc.
     ![Graphical user interface, application Description automatically
  generated](./images/media/image50.png)
  
-    If prompted, enter the Admin Center credentials as: **admin / admin**.
+    If prompted, enter the Admin Center credentials as: **admin/admin**.
  
     The server is stopped.
  
@@ -1012,8 +1012,7 @@ In this section of the lab, you will use the provided shell script that
 automates the tasks for producing a server package for deployment to the
 collective.
 
-**Use the Maven Build script to produce a Server package with Liberty
-22.0.0.12**
+**Use the Maven Build script to produce a Server package with Liberty 22.0.0.12**
 
 1.  Run the following command to build the applications and produce a
     server package, which will use WebSphere Liberty kernel, version
@@ -1024,18 +1023,16 @@ collective.
     Take note that a new Liberty server package was created with the name:
  **22.0.0.12-pbwServerX.zip**
  
-    ![A screenshot of a computer Description automatically
- generated](./images/media/image56.png)
+    ![A screenshot of a computer Description automatically generated](./images/media/image56.png)
  
-    The output from the **mavenBuild** script is a Liberty Server
- package.
+    The output from the **mavenBuild** script is a Liberty Server package.
  
     The server package is in the following working directory: **/home/techzone/lab-work/packagedServers**.
 
 2.  Using the File viewer on the VM desktop, see that the server package
     was produced.
 
-    a. Double mouse-click on the **Home** folder on the Desktop VM
+    a. Double mouse-click the **Home** folder on the Desktop VM
  
     <img src="./images/media/image15.png" width="150"/>
 
@@ -1336,7 +1333,7 @@ to Liberty 22.0.0.12.
  
     ![](./images/media/image73.png)
  
-    b. In the application, click on the **Help** link, located on the
+    b. In the application, click the **Help** link, located on the
  upper right corner of the application page.
  
     ![](./images/media/image74.png)
@@ -1348,14 +1345,14 @@ to Liberty 22.0.0.12.
     ![A screenshot of a computer Description automatically generated with
  medium confidence](./images/media/image75.png)
  
-    d. In the application, click the “**Home**” link to return to the
- PlantsByWebSphere Home page.
+    d. In the application, click the **Home** link to return to the
+ **PlantsByWebSphere** Home page.
  
     ![](./images/media/image76.png)
 
 2.  OPTIONAL: Repeat the steps to access
-    the **PlantsByWebSphere** application on appServer2 on host
-    server1.gym.lan
+    the **PlantsByWebSphere** application on **appServer2** on host
+    **server1.gym.lan**.
 
          https://server1.gym.lan:9442/PlantsByWebSphere
  
@@ -1367,9 +1364,9 @@ to Liberty 22.0.0.12.
 
 ### 10.2 Test the WhereAmI application:
 
-1.  To access the **WhereAmI** application on appServer1
+1.  To access the **WhereAmI** application on **appServer1**.
 
-    a. Open a new tab on the Firefox browser and test WhereAmI
+    a. Open a new tab on the Firefox browser and test the **WhereAmI**
  on **appServer1**, which is on **server0.gym.lan**
  
         https://server0.gym.lan:9441/WhereAmI
@@ -1379,7 +1376,7 @@ to Liberty 22.0.0.12.
     ![](./images/media/image78.png)
 
 2.  OPTIONAL: Repeat the steps to access the **WhereAmI** application on
-    appServer2 on host server1.gym.lan
+    **appServer2** on host **server1.gym.lan**.
 
         https://server1.gym.lan:9442/WhereAmI
  
@@ -1402,7 +1399,7 @@ HTTP server to the new Liberty 22.0.0.12 servers, after the upgrade.
  initial request.
  
     **Note:** It is possible that the request is routed
- to **appServer2** instead of appServer1.
+ to **appServer2** instead of **appServer1**.
  
     Importantly, note the Liberty Version is: **22.0.0.12**, validating
  that the Dynamic Routing capability has automatically detected the new
@@ -1439,7 +1436,7 @@ apply your own build processes or automation to achieve significant
 agility and flexibility managing Liberty collectives with repeatable
 automated processes that significantly reduces risk to your business.
 
-You have gained an appreciation for Liberty’s “**zero-migration**”
+You have gained an appreciation for Liberty’s **zero-migration**
 architecture and how simple it is to upgrade Liberty following the
 common practices described in the lab.
 

@@ -1,6 +1,0 @@
-
-<server>
-  <logging consoleLogLevel="INFO" traceSpecification="webcontainer=all=enabled">
- </logging>
-</server>
-
