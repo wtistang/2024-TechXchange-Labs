@@ -53,10 +53,10 @@ The lab environemnt consists of three Host VMs:
 
   - server1.gym.lan
 
-  - instana
+  - instanaserver (not used)
 
 You will use Linux shell scripts provided for the lab, to build Liberty
-server packages, construct a Liberty- ND Collective that spans the server0 and server1 host VMs, and deploy the server package to these two host VMs.
+server packages, construct a Liberty- ND Collective that spans the **server0** and **server1** host VMs, and deploy the server package to these two host VMs.
 
 The Liberty-ND Collective that you will create is illustrated below:
 
@@ -90,21 +90,18 @@ following components:
     showcase Liberty capabilities such as Dynamic Routing, Session
     Persistence, and fail-over scenarios.
 
-    **Note:** In most cases the HTTP server is placed on a dedicated host located in the DMZ, but to minimize the size of this demonstration environment, it’s collocated with Liberty processes.
+    > **Note:** In most cases the HTTP server is placed on a dedicated host located in the DMZ, but to minimize the size of this demonstration environment, it’s collocated with Liberty processes.
 
-The “**server1.gym.lan**” VM contains the following components:
+The **server1.gym.lan** VM contains the following components:
 
-  - **Collective Member:** Collective members are Liberty Servers that
-    run your application and are joined to the collective with the
-    “**collectiveMember-1.0**” feature.
+  - **Collective Member:** Collective members are Liberty Servers that run your application and are joined to the collective with the
+    **collectiveMember-1.0** feature.
 
 ## Accessing the environment
 
 1.  Access the lab environment from your web browser.
     
-    The lab environment page is displayed, the lab environment contains
- three (3) Linux VMs, **server0**, **server1** and **instana**. The VM **server0** is
- the one with the Graphical User Interface (GUI) for you to access and work in this lab.
+    The lab environment page is displayed, the lab environment contains three (3) Linux VMs, **server0**, **server1** and **instanaserver**. The VM **server0** is the one with the Graphical User Interface (GUI) for you to access and work in this lab. From the **server0** GUI you are going to use the lab shell scripts to access and work with **server1**. The **instanaserver** VM is not used in this lab.
  
     ![Screens screenshot of a computer Description automatically
  generated](./images/media/image2.png)
@@ -335,7 +332,7 @@ provided in the projects and produced by the build.
   - Maven adds the configDropins/overrides as required for the
     environment:
 
-> ![](./images/media/image17.png)
+ ![](./images/media/image17.png)
 
 **Below is a hi-level list of tasks the maven build process performs in
 this lab:**
@@ -633,7 +630,7 @@ which you need to ensure is up and running.
 
 
 
-### 5.1 - Test the two example applications used in the lab
+### 5.1 Test the two example applications used in the lab
 
 In this section, you will test the two applications that are deployed in
 the collective.
@@ -739,7 +736,7 @@ perform the following tasks:
 
 
 
-### 6.1 - Setup Dynamic Routing in WebSphere Liberty
+### 6.1 Setup Dynamic Routing in WebSphere Liberty
 
 In this section, you will use an automation script, which we provide in
 the lab environment, to perform the steps described above to setup and
@@ -762,7 +759,7 @@ configure Dynamic Routing.
 
    **Dynamic routing in the Liberty Collective is now ready to use\!**
 
-### 6.2 - Examine the generated plugin-cfg.xml   file
+### 6.2 Examine the generated plugin-cfg.xml file
 
 The **plugin-cfg.xml** file contains configuration information that
 determines how the web server plug-in forwards requests to the Liberty
@@ -772,9 +769,7 @@ The plugin only needs to connect to the Collective Controller to get
 topology information. It does not need to know the host/port of the
 application servers.
 
-The plugin-cfg.xml file is in the following directory:
-
->  **/opt/IBM/WebSphere/Plugins/config/webserver1**
+The **plugin-cfg.xml** file is in the following directory: **/opt/IBM/WebSphere/Plugins/config/webserver1**.
 
 1.  Examine the generated **plugin-cfg.xml**
 
@@ -804,7 +799,7 @@ The plugin-cfg.xml file is in the following directory:
 
 2.  **Close** the **gedit** editor. DO NOT SAVE ANY CHANGES\!
 
-### 6.3 - Examine the Web Server’s httpd.conf file
+### 6.3 Examine the Web Server’s httpd.conf file
 
 The **httpd.conf** file contains the HTTP Server configuration.
 
@@ -1110,7 +1105,7 @@ collective.
  
     ![](./images/media/image59.png)
 
-### 9.1 - Deploy collective member to the local host VM, server0.gym.lan
+### 9.1 Deploy collective member to the local host VM, server0.gym.lan
 
 Use the automation script to deploy the Liberty server from the server
 package you created earlier and join the member to the collective.
@@ -1151,7 +1146,7 @@ package you created earlier and join the member to the collective.
  
     ![](./images/media/image61.png)
 
-### 9.2 - Deploy a collective member to the remote host VM, server1.gym.lan
+### 9.2 Deploy a collective member to the remote host VM, server1.gym.lan
 
 Now, run the script again, using slightly different parameters, to
 deploy Liberty to the remote VM, **server1.gym.lan**. And, then join the
@@ -1317,7 +1312,7 @@ applications and ensure the applications run properly after the upgrade
 to Liberty 22.0.0.12.
 
 
-### 10.1 - Test the PlantsByWebSphere application:
+### 10.1 Test the PlantsByWebSphere application:
 
 1.  To access the **PlantsByWebSphere** application on appServer1
 
