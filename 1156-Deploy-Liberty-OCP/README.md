@@ -114,7 +114,7 @@ The following prerequisites must be completed prior to beginning this lab:
  
     c. Click the **Send Text** icon in the VM Desktop tool bar, paste the
  text into its window, then again click **Send Text** to send the text
- to an open command shell and close its window.
+ to the VM Desktop environment and close its window.
  
     ![A screenshot of a computer Description automatically
  generated](./images/media/image008.png)

@@ -102,8 +102,8 @@ In the lab, there will be different roles involved with perform different tasks 
 
     <kbd>![](./images/media/image006.png)</kbd>
 
-2.  You can copy text from the lab guide into the lab
-    environment using the VM Desktop Send Text tool.
+2.  To copy text from the lab guide into the lab
+    environment you have to use the VM Desktop Send Text tool.
 
     <kbd>![](./images/media/image007.png)</kbd>
  
@@ -111,7 +111,7 @@ In the lab, there will be different roles involved with perform different tasks 
  
     b. Open a terminal window, or a text editor or a web browser in the VM Desktop where you want to copy the text to.
  
-    c. Click the **Send Text** icon in the VM Desktop tool bar, paste the text into its window, then again click **Send Text** to send the text to an open command shell and close its window.
+    c. Click the **Send Text** icon in the VM Desktop tool bar, paste the text into its window, then again click **Send Text** to send the text to the VM Desktop environment and close its window.
  
     <kbd>![](./images/media/image008.png)</kbd>
  
@@ -393,7 +393,7 @@ Now you will edit the **simpleweb** application which only consists of a servlet
     <tr class="odd">
     <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
     <td>
-    <p>If you do not see the code assistant window, enter **CTRL+Space** to activate it.
+    <p>If you do not see the code assistant window, enter <b>CTRL+Space</b> to activate it.
     </p></td>
     </tr>
     </tbody>
@@ -833,7 +833,7 @@ You will now use **includes** to structure the server configuration.
 
 4. Save the changes, then close the **application-config.xml** file.
 
-5. Switch to the server.xml file. Delete the **webApplication** element, then enter **include** and press **CTRL+SPACE**.
+5. Switch to the **server.xml** file. Delete the **webApplication** element, then enter **include** and press **CTRL+SPACE**.
 
     The Liberty configuration assistant shows you the available elements.
 
