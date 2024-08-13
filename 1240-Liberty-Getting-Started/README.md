@@ -74,25 +74,25 @@ In the lab, there will be different roles involved with perform different tasks 
 
     The lab environment page is displayed, the lab environment contains one (1) Linux VMs, with the Graphical User Interface (GUI) for you to access and work in this lab.
  
-    <kbd>![](./images/media/image001.png)</kbd>
+    ![](./images/media/image001.png)
 
 2.  Click **Red Hat** icon to access it.
 
-    <kbd>![](./images/media/image002.png)</kbd>  
+    ![](./images/media/image002.png)
     
 3.  Click **techzone** user to log in.
 
-    <kbd>![](./images/media/image003.png)</kbd>
+    ![](./images/media/image003.png)
     
 4. Enter the password as: **IBMDm0s!** and press **Enter**.
 
-    <kbd>![](./images/media/image004.png)</kbd>
+    ![](./images/media/image004.png)
     
     **Note:** That is a numeric zero in **IBMDem0s!**
 
     The lab VM GUI is displayed.
 
-    <kbd>![](./images/media/image005.png)</kbd>
+    ![](./images/media/image005.png)
 
 
 ### Tips for working in the lab environment:
@@ -100,12 +100,12 @@ In the lab, there will be different roles involved with perform different tasks 
 1.  You can use the VM Desktop tools to fit to window or resize the
     window.
 
-    <kbd>![](./images/media/image006.png)</kbd>
+    ![](./images/media/image006.png)
 
 2.  To copy text from the lab guide into the lab
     environment you have to use the VM Desktop Send Text tool.
 
-    <kbd>![](./images/media/image007.png)</kbd>
+    ![](./images/media/image007.png)
  
     a. Copy the text from the lab guide that you want to paste into the lab environment.
  
@@ -113,11 +113,11 @@ In the lab, there will be different roles involved with perform different tasks 
  
     c. Click the **Send Text** icon in the VM Desktop tool bar, paste the text into its window, then again click **Send Text** to send the text to the VM Desktop environment and close its window.
  
-    <kbd>![](./images/media/image008.png)</kbd>
+    ![](./images/media/image008.png)
  
     The text is now copied to the terminal window, or the text editor or the web browser you opened in the previous step.
  
-    <kbd>![](./images/media/image009.png)</kbd>
+    ![](./images/media/image009.png)
         
 
 ### Execute Lab Tasks
@@ -126,7 +126,7 @@ In the lab, there will be different roles involved with perform different tasks 
 
 1. Double-click the terminal icon to open a terminal window.
 
-    <kbd>![](./images/media/image010.png) </kbd>
+    ![](./images/media/image010.png) 
 
 2. Create a **Student** directory and some sub-directories used in the lab with commands:
 
@@ -144,37 +144,37 @@ The objective of this section is to develop a simple web application for Liberty
 
 In this scenario, you want to create a Jakarta EE 10 Web application with the name **simpleweb** and will use maven to build it. The fastest way to get started is to use an Open Liberty starter application which generates a project with the maven configuration as well as a basic Liberty setup.
 
-<kbd>![LibertyStarter](./images/media/LibertyStarter.png)</kbd>
+![LibertyStarter](./images/media/LibertyStarter.png)
 
 The **Open Liberty starter** gives you a simple, quick way to get the necessary files to start building an application on Open Liberty. There is no need to search how to find out what to add to your maven or gradle build files. A simple **RestApplication.java** file is generated for you to start creating a REST based application. A **server.xml** configuration file is provided with the necessary features for the MicroProfile and Jakarta EE versions that you previously selected. 
 
 
 1. Click the **Activties** button.
 
-    <kbd>![](./images/media/image011.png)</kbd>
+    ![](./images/media/image011.png)
 
 2. Open a browser window by double-clicking on **Activities** and then select the **Firefox** browser icon.
 
-    <kbd>![Toolbar_firefox](./images/media/Toolbar_firefox.png)</kbd>
+    ![Toolbar_firefox](./images/media/Toolbar_firefox.png)
 
     If you get a pop-up that Authentication is required, enter **IBMDem0s!**. 
 
-    <kbd>![Authentication-required](./images/media/Authentication-required.png)</kbd>
+    ![Authentication-required](./images/media/Authentication-required.png)
 
 3. Type the URL as: **https://openliberty.io/start/** and press **Enter**.   
-    <kbd>![](./images/media/image012.png)</kbd>
+    ![](./images/media/image012.png)
 
 4. Change the artifact name to **simpleweb**, change the Java level to **17** and leave the rest as is, then click **Generate project** 
 
-    <kbd>![LibertyStarter-simpleweb](./images/media/LibertyStarter-simpleweb.png)</kbd>
+    ![LibertyStarter-simpleweb](./images/media/LibertyStarter-simpleweb.png)
 
     The project zip file is saved under the **Downloads** directory.
 
-    <kbd>![](./images/media/image013.png)</kbd>
+    ![](./images/media/image013.png)
 
 5. You will see a pop-up like the one below. Click **Got it!**  to close the window.
 
-    <kbd>![LibertyStarter-simpleweb-save2](./images/media/LibertyStarter-simpleweb-save2.png)</kbd>
+    ![LibertyStarter-simpleweb-save2](./images/media/LibertyStarter-simpleweb-save2.png)
 
 6. Extract the file.
 
@@ -185,7 +185,7 @@ The **Open Liberty starter** gives you a simple, quick way to get the necessary 
         mv ~/Downloads/simpleweb.zip ~/Student/dev
         unzip ~/Student/dev/simpleweb.zip -d ~/Student/dev/simpleweb
 
-    <kbd>![image020](./images/media/image020.png)</kbd>
+    ![image020](./images/media/image020.png)
 
     The project has been created under the **~/Student/dev/simpleweb** directory.
     
@@ -193,7 +193,7 @@ The **Open Liberty starter** gives you a simple, quick way to get the necessary 
 
         ls -lrt ~/Student/dev/simpleweb
 
-    <kbd>![image021](./images/media/image021.png)</kbd>
+    ![image021](./images/media/image021.png)
 
 ### 2.2 Inspect the starter project using Open Visual Studio Code
 
@@ -204,17 +204,17 @@ Now you will use Visual Studio Code to see what has been generated as part of th
         cd ~/Student/dev/simpleweb/
         code .
 
-    <kbd>![image022](./images/media/image022.png)</kbd>
+    ![image022](./images/media/image022.png)
 
     Visual Studio Code UI will be opened.
 
 2. Click **Yes, I trust the authors** to continue.
 
-    <kbd>![image023](./images/media/image023.png)</kbd>
+    ![image023](./images/media/image023.png)
 
     If you see during the lab one of the pop-ups below or any other pop-up asking to install something, close the pop-up without installation by clicking the **X**.
-    <kbd>![image024](./images/media/image024.png)</kbd>
-    <kbd>![image025](./images/media/image025.png)</kbd>
+    ![image024](./images/media/image024.png)
+    ![image025](./images/media/image025.png)
 
 
 3. Investigate into the generated project:
@@ -222,19 +222,19 @@ Now you will use Visual Studio Code to see what has been generated as part of th
     In Visual Studio Code, take a look at the **Explorer** section to see the content of the project.
     You can find a **src** and a **target** folder, a **Dockerfile** and a maven build file (**pom.xml**).
 
-    <kbd>![image026](./images/media/image026.png)</kbd>
+    ![image026](./images/media/image026.png)
 
 
 4. Take a look at the generated Maven configuration 
 
     a. Click **pom.xml** to see the maven pom. In the build section, you can find the configuration of the **liberty-maven-plugin**.
 
-    <kbd>![image027](./images/media/image027.png)</kbd>
+    ![image027](./images/media/image027.png)
 
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>Don’t worry if the version of the plugin has changed to 3.10.2 or later.
     </p></td>
@@ -248,15 +248,15 @@ Now you will use Visual Studio Code to see what has been generated as part of th
 
     a.  Open the **src >  main >liberty > config > server.xml** to see the Liberty configuration.
 
-    <kbd>![image028](./images/media/image028.png)</kbd>
+    ![image028](./images/media/image028.png)
 
     As you can see, the features for **jakartaee-10** and **MicroProfile-6.1** have been configured.
 
-    <kbd>![image029](./images/media/image029.png)</kbd>
+    ![image029](./images/media/image029.png)
 
     b. Scroll down and you can see that the http endpoint and the web application have been configured.
 
-    <kbd>![image030](./images/media/image030.png)</kbd>
+    ![image030](./images/media/image030.png)
 
 
 ### 2.3 Adjust the Liberty configuration
@@ -270,16 +270,16 @@ As best practice to optimize the footprint of the application runtime regarding 
 2. Delete the lines **\<feature>jakartaee-10.0\</feature>** and **\< feature>MicroProfile-6.1\</feature>**.
     Your **featureManager** section should now look like this:
 
-    <kbd>![image031](./images/media/image031.png)</kbd>
+    ![image031](./images/media/image031.png)
 
 3. Now you will use the **Liberty configuration assistant** to define the servlet feature. Place your cursor at the beginning of an empty line in the featureManager section. Then press the **CTRL key** and press **SPACE** to activate the configuration assistant. You should see something like:
 
-    <kbd>![image032](./images/media/image032.png)</kbd>
+    ![image032](./images/media/image032.png)
 
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>You might have to click the arrow right to feature to get the description.
     </p></td>
@@ -289,28 +289,28 @@ As best practice to optimize the footprint of the application runtime regarding 
 
 4. Select **feature** and the feature element gets added.
 
-    <kbd>![image033](./images/media/image033.png)</kbd>
+    ![image033](./images/media/image033.png)
 
 5. Use again **CTRL+SPACE** to get the list of available features.
 
-    <kbd>![image034](./images/media/image034.png)</kbd>
+    ![image034](./images/media/image034.png)
 
 6. Type the word **servlet** to see the available servlet features.
 
-    <kbd>![image035](./images/media/image035.png)</kbd>
+    ![image035](./images/media/image035.png)
 
 7. Use the arrow-down key to get the description for **servlet-6.0**.
 
-    <kbd>![image036](./images/media/image036.png)</kbd>
+    ![image036](./images/media/image036.png)
 
 8. Select the feature **servlet-6.0** and your configuration should now look like this:
 
-    <kbd>![image037](./images/media/image037.png)</kbd>
+    ![image037](./images/media/image037.png)
 
 9. For this part of the lab, you do not need to define a keystore or the basic registry, so you need to delete the generated entries.
     Your configuration should now look like this:
 
-    <kbd>![image038](./images/media/image038.png)</kbd>
+    ![image038](./images/media/image038.png)
 
 10. Save the configuration by using **CTRL+S**.
 
@@ -325,7 +325,7 @@ Your code is automatically compiled and deployed to your running server, making 
 
 You can run tests on demand or even automatically so that you can get immediate feedback on your changes. You can also attach a debugger at any time to debug your running application.
 
-<kbd>![LibertyDevMode](./images/media/LibertyDevMode.png)</kbd>
+![LibertyDevMode](./images/media/LibertyDevMode.png)
 
 You can use the capabilities of Liberty dev mode inside and outside of an IDE. This provides you the flexibility of choice. In a terminal window, you would use Liberty in dev mode with maven using the command **mvn liberty:dev** or **mvn liberty:devc** if you want to develop in a container. 
 
@@ -333,28 +333,28 @@ In the lab environment, the Liberty tools plugin has been installed into Visual 
 
 1. In Visual Studio Code, expand the Liberty Dashboard.
 
-    <kbd>![image040](./images/media/image040.png)</kbd>
+    ![image040](./images/media/image040.png)
 
 2. Right-click **simpleweb** and then **start** to start the server in dev mode.
 
-    <kbd>![image041](./images/media/image041.png)</kbd>
+    ![image041](./images/media/image041.png)
 
 3. A terminal opens within Visual Studio Code and you can see that the start of the build process gets triggered.
 
-    <kbd>![image042](./images/media/image042.png)</kbd>
+    ![image042](./images/media/image042.png)
 
 4. The Liberty plugin as well as the Liberty server artifacts get downloaded, then the server is ready for testing.
 
-    <kbd>![image043](./images/media/image043.png)</kbd>
+    ![image043](./images/media/image043.png)
 
 5. Switch to the browser window and enter the URL **localhost:9080**. You should see something like this:
 
-    <kbd>![image044](./images/media/image044.png)</kbd>
+    ![image044](./images/media/image044.png)
 
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>If you get a pop-up with <strong>Authentication required</strong>, enter the password <strong>IBMDem0s!</strong> and click <strong>Unlock</strong>.
     </p></td>
@@ -372,26 +372,26 @@ Now you will edit the **simpleweb** application which only consists of a servlet
 
 2. In Visual Studio Code, expand the path to **src/main/java/com/demo/rest**, then **right-click** on **demo** and select **New File**.
 
-    <kbd>![image045](./images/media/image045.png)</kbd>
+    ![image045](./images/media/image045.png)
 
 3. Enter the name **helloWorldServlet.java** and press **ENTER**.
 
-    <kbd>![image046](./images/media/image046.png)</kbd>
+    ![image046](./images/media/image046.png)
 
 4. The file **src/main/java/com/demo/helloWorldServlet.java** is generated and opens in an editor.
 
-    <kbd>![image047](./images/media/image047.png)</kbd>
+    ![image047](./images/media/image047.png)
 
 5. Remove all code from the file. Then enter **servlet**.
 
-    <kbd>![image048](./images/media/image048.png)</kbd>
+    ![image048](./images/media/image048.png)
     
     The code assistant window is shown.
 
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>If you do not see the code assistant window, enter <b>CTRL+Space</b> to activate it.
     </p></td>
@@ -401,27 +401,27 @@ Now you will edit the **simpleweb** application which only consists of a servlet
 
 6. The code assistant offers some servlet methods for Jakarta EE. Select **servlet_doget**, and the required starter code gets generated. As you can see, the fields that should be changed are highlighted.
 
-    <kbd>![image049](./images/media/image049.png)</kbd>
+    ![image049](./images/media/image049.png)
 
 7. Change the **servletName** to **helloWorldServlet** and the **urlPatters** to **/helloWorld**. The code should now look like this:
 
-    <kbd>![image050](./images/media/image050.png)</kbd>
+    ![image050](./images/media/image050.png)
 
 8. Press **CTRL+S** to save the code change. Take a look at the terminal output. As Liberty has been started in DevMode, the code changes are picked up automatically, the source gets compiled and Liberty gets updated.
 
-    <kbd>![image051](./images/media/image051.png)</kbd>
+    ![image051](./images/media/image051.png)
 
 9. Switch to the browser and open the URL **localhost:9080/simpleweb/helloWorld**. You should see the output of the created servlet.
 
-    <kbd>![image052](./images/media/image052.png)</kbd>
+    ![image052](./images/media/image052.png)
 
 10. Switch back to Visual Studio Code and change the source code of the servlet response text to something like this: **helloWorld - Example HTTP GET request for HTTPServlet**
 
-    <kbd>![image053](./images/media/image053.png)</kbd>
+    ![image053](./images/media/image053.png)
 
 11. Save the changes and reload the page in the browser. The output should be updated.
 
-    <kbd>![image054](./images/media/image054.png)</kbd>
+    ![image054](./images/media/image054.png)
 
 12. Switch back to Visual Studio Code and close the editor for the file **helloWorldServlet.java**.
 
@@ -438,11 +438,11 @@ The generated maven pom by default does not generate a WAR file as it uses a “
 
 2. In the Liberty dashboard, **right-click** on the **simpleweb** application and select **Stop** (or use **CTRL+C** on the terminal window instead).
 
-    <kbd>![image055](./images/media/image055.png)</kbd>
+    ![image055](./images/media/image055.png)
 
 3. Verify in the terminal that Liberty has been stopped.
 
-    <kbd>![image056](./images/media/image056.png)</kbd>
+    ![image056](./images/media/image056.png)
 
 4. In Visual Studio Code, open the file **pom.xml** and add to the Liberty plugin configuration the lines:
     
@@ -450,23 +450,23 @@ The generated maven pom by default does not generate a WAR file as it uses a “
         <looseApplication>false</looseApplication>
         </configuration>
     
-    <kbd>![image057](./images/media/image057.png)</kbd>
+    ![image057](./images/media/image057.png)
 
 5. If you would start Liberty now again in Dev Mode, the property looseApplication would be ignored and you would see a warning like this:   
  
-    <kbd>![image058](./images/media/image058.png)</kbd>
+    ![image058](./images/media/image058.png)
 
     Therefore, you must start Liberty in run mode to generate the WAR file. This can be done by entering in the terminal window the command:
     
         mvn liberty:run
 
-    <kbd>![image059](./images/media/image059.png)</kbd>
+    ![image059](./images/media/image059.png)
 
     As you can see in the screenshot above, maven has built the file **simpleweb.war** and stored it at the **~/Student/dev/simpleweb/target/** directory.
 
 6. Scroll down and you can see that it has been installed into the directory **~/Student/dev/simpleweb/target/liberty/wlp/usr/servers/defaultServer/apps**.
 
-    <kbd>![image060](./images/media/image060.png)</kbd>
+    ![image060](./images/media/image060.png)
 
 7. Feel free to test the application in the browser, then stop the Liberty instance by using **CTRL+C**.
 
@@ -496,7 +496,7 @@ For more details and options, see **https://www.ibm.com/docs/en/was-liberty/base
 
         ~/Student/dev/simpleweb/target/liberty/wlp/bin/server package defaultServer --archive=simpleweb-serverpackage.jar --include=all
 
-    <kbd>![image061](./images/media/image061.png)</kbd>
+    ![image061](./images/media/image061.png)
 
 2. To hand over the server package to the ops team, use the following commands: 
 
@@ -533,7 +533,7 @@ You will now explore the Liberty server package to get a better understanding ho
 <table>
 <tbody>
 <tr class="odd">
-<td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+<td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
 <td>
 <p>In this section, you will use the <strong>server run</strong> command instead of the <strong>server start</strong> command. This will allow you to see the logs immediately instead of having to use a tail command. It will also allow you to stop the Liberty server via <strong>CTRL+C</strong>
 </p></td>
@@ -548,7 +548,7 @@ You will now explore the Liberty server package to get a better understanding ho
         cd ~/Student/ops/
         java -jar ~/Student/assets/simpleweb-serverpackage.jar
 
-    <kbd>![image062](./images/media/image062.png)</kbd>
+    ![image062](./images/media/image062.png)
 
     The directory **test/wlp** got created and contains the configured Liberty instance including application. 
     
@@ -556,13 +556,13 @@ You will now explore the Liberty server package to get a better understanding ho
 
         test/wlp/bin/productInfo version
 
-    <kbd>![image063](./images/media/image063.png)</kbd>
+    ![image063](./images/media/image063.png)
 
 3. Run the following command to **list the Liberty features** that have been installed:
 
         test/wlp/bin/productInfo featureInfo
 
-    <kbd>![image064](./images/media/image064.png)</kbd>
+    ![image064](./images/media/image064.png)
 
     As you can see, the server package provided by the developer only contains the **servlet-6.0** features which is the only feature required by the application. 
 
@@ -571,13 +571,13 @@ You will now explore the Liberty server package to get a better understanding ho
 
         test/wlp/bin/server list
 
-    <kbd>![image065](./images/media/image065.png)</kbd>
+    ![image065](./images/media/image065.png)
 
 5. **Start the Liberty server instance** by running the command:
 
         test/wlp/bin/server start defaultServer
     
-    <kbd>![image066](./images/media/image066.png)</kbd>
+    ![image066](./images/media/image066.png)
 
     This runs the server in the background and the output is written to files in the **test/wlp/bin/servers/defaultServer/logs** directory.
     
@@ -591,14 +591,14 @@ You will now explore the Liberty server package to get a better understanding ho
 
         cat test/wlp/usr/servers/defaultServer/logs/messages.log
 
-    <kbd>![image067](./images/media/image067.png)</kbd>
+    ![image067](./images/media/image067.png)
     
     At the beginning of the log, you can see that Open Liberty version is used.
     The server is started when the message **“The defaultServer server is ready to run a smarter planet”** is displayed in the messages.log file.
 
 7. Test that the application is accessible via URL **http://localhost:9080/simpleweb/helloWorld**
 
-    <kbd>![image068](./images/media/image068.png)</kbd>
+    ![image068](./images/media/image068.png)
 
 
 ### 3.1.2 Liberty dynamic updates
@@ -610,45 +610,45 @@ Let’s do a short excurse about Liberty dynamic updates. You will use Visual St
         cd ~/Student/ops/test
         code .
 
-    <kbd>![image069](./images/media/image069.png)</kbd>
+    ![image069](./images/media/image069.png)
 
 2. Visual Studio Code opens. Click **Yes**, if you are asked to trust the author.
 
-    <kbd>![image070](./images/media/image070.png)</kbd>
+    ![image070](./images/media/image070.png)
 
 3. In Visual Studio Code, open a terminal window
 
-    <kbd>![image071](./images/media/image071.png)</kbd>
+    ![image071](./images/media/image071.png)
 
 4. In the terminal, use the tail command to display the Liberty message log.
 
         tail -f wlp/usr/servers/defaultServer/logs/messages.log
 
-    <kbd>![image072](./images/media/image072.png)</kbd>
+    ![image072](./images/media/image072.png)
 
 5. In Visual Studio Code, navigate to **wlp > usr > servers > defaultServer** and open the file **server.xml**.
 
-    <kbd>![image074](./images/media/image074.png)</kbd>
+    ![image074](./images/media/image074.png)
 
 6. In the **server.xml** file, change the httpPort setting from port **9080** to port **9081**.
 
-    <kbd>![image075](./images/media/image075.png)</kbd>
+    ![image075](./images/media/image075.png)
 
     You can see in the terminal that the change is picked up and Liberty listens now on port **9081**.
 
-    <kbd>![image076](./images/media/image076.png)</kbd>
+    ![image076](./images/media/image076.png)
 
 7. Change the webApplication contextRoot setting from **“/simpleweb”** to **“/mysimpleweb”**.
 
-    <kbd>![image077](./images/media/image077.png)</kbd>
+    ![image077](./images/media/image077.png)
 
     You can see in the log that the change is picked up.
 
-    <kbd>![image078](./images/media/image078.png)</kbd>
+    ![image078](./images/media/image078.png)
 
 8. Switch to the browser and access the application via URL **localhost:9081/mysimpleweb/helloWorld**.
 
-    <kbd>![image079](./images/media/image079.png)</kbd>
+    ![image079](./images/media/image079.png)
 
     As you have seen, you can change the Liberty configuration without having to restart the server. 
     You will explore this further later in the lab when you dynamically update the logging for example.
@@ -660,7 +660,7 @@ Let’s do a short excurse about Liberty dynamic updates. You will use Visual St
 
         wlp/bin/server stop defaultServer
 
-    <kbd>![image080](./images/media/image080.png)</kbd>
+    ![image080](./images/media/image080.png)
 
 
 ### 3.2 Create Liberty configuration snippets
@@ -673,11 +673,11 @@ You will now modify the file **server.xml** which has been provided as part of t
 
 1. In Visual Studio Code, open the file **server.xml** if you closed it previously.
 
-    <kbd>![image081](./images/media/image081.png)</kbd>
+    ![image081](./images/media/image081.png)
 
 2. Take a look at the httpEndpoint element.
 
-    <kbd>![image082](./images/media/image082.png)</kbd>
+    ![image082](./images/media/image082.png)
 
      As mentioned in the comment, the httpEndpoint is by default not accessible from a remote client.
      This is good from security point of view and works fine if the client is local to the server. But if you, for example, use a remote load balancer or a remote HTTP server, this will not work. So there will be likely situations where you want to allow access to the application from a remote client and you must add a host attribute. You will use the Liberty Tools configuration assistant to do this.
@@ -688,11 +688,11 @@ You will now modify the file **server.xml** which has been provided as part of t
     
     Use the arrow-down key and navigate to the **host** attribute to see the description of the attribute.
 
-    <kbd>![image083](./images/media/image083.png)</kbd>
+    ![image083](./images/media/image083.png)
 
 4. Select host and your configuration should look like this:
 
-    <kbd>![image084](./images/media/image084.png)</kbd>
+    ![image084](./images/media/image084.png)
 
     As you can see, the attribute host defaults to **localhost**.
 
@@ -714,19 +714,19 @@ Instead you will use the Liberty configuration assistant to get an understanding
 
 1. Place the cursor in an empty line under the httpEndpoint section, then enter **var** and press **CTRL+SPACE**.
 
-    <kbd>![image085](./images/media/image085.png)</kbd>
+    ![image085](./images/media/image085.png)
 
 2. Select **variable**, then enter as name **"httpEndpoint_port"**.
 
-    <kbd>![image086](./images/media/image086.png)</kbd>
+    ![image086](./images/media/image086.png)
 
 3. Place the cursor after **name="httpEndpoint_port"**, enter a **SPACE** and press **CTRL+SPACE**.
 
-    <kbd>![image087](./images/media/image087.png)</kbd>
+    ![image087](./images/media/image087.png)
 
 4. Select **defaultValue** and enter as value **9080**.
 
-    <kbd>![image088](./images/media/image088.png)</kbd> 
+    ![image088](./images/media/image088.png) 
 
 5. Use copy and paste to create two additional variables: 
     - one with the name **"httpEndpoint_secure_port"** and the default value **"9443"**
@@ -734,23 +734,23 @@ Instead you will use the Liberty configuration assistant to get an understanding
     
     Your configuration should now look like this:
 
-    <kbd>![image089](./images/media/image089.png)</kbd>
+    ![image089](./images/media/image089.png)
 
 6. Switch to the **httpEndpoint** section, remove for the attribute **host** the value **"localhost"**, enter **${ht** and press **CTRL+SPACE**.
 
-    <kbd>![image090](./images/media/image090.png)</kbd>
+    ![image090](./images/media/image090.png)
 
     As you can see, the variable names are offered. 
     
 7. Select **"httpEndpoint_host"**, then enter **"}"**. Your configuration should look like this:
 
-    <kbd>![image090b](./images/media/image090b.png)</kbd>
+    ![image090b](./images/media/image090b.png)
 
 8. Do the same kind of change for the attributes **httpPort** and **httpsPort**. 
     
     Your final httpEndpoint configuration should now look like this:
 
-    <kbd>![image091](./images/media/image091.png)</kbd>
+    ![image091](./images/media/image091.png)
 
 9. Save your changes.
 
@@ -790,7 +790,7 @@ Instead you will use the Liberty configuration assistant to get an understanding
         
         wlp/bin/server run defaultServer
 
-    <kbd>![image092](./images/media/image092.png)</kbd>
+    ![image092](./images/media/image092.png)
 
     As you can see, the Liberty server gets started and listens on port **9080**.
 
@@ -801,7 +801,7 @@ Instead you will use the Liberty configuration assistant to get an understanding
         export httpEndpoint_port=9081
         wlp/bin/server run defaultServer
 
-    <kbd>![image093](./images/media/image093.png)</kbd>
+    ![image093](./images/media/image093.png)
 
     As you can see, the Liberty server now listens on port **9081**, which shows that you can now override from outside Liberty the default settings defined in the Liberty server.xml file. In a Kubernetes environment, you could for example use a config map to change configuration settings.
 
@@ -820,16 +820,16 @@ You will now use **includes** to structure the server configuration.
 
         cp wlp/usr/servers/defaultServer/server.xml wlp/usr/servers/defaultServer/application-config.xml
 
-    <kbd>![image094](./images/media/image094.png)</kbd>
+    ![image094](./images/media/image094.png)
 
 2. Open the newly created file **application-config.xml** in Visual Studio Code.
 
-    <kbd>![image095](./images/media/image095.png)</kbd>
+    ![image095](./images/media/image095.png)
 
 3. Remove all configuration inside the server section other than the definition of the **webApplication** element.
     Your **application-config.xml** should look like this:
 
-    <kbd>![image096](./images/media/image096.png)</kbd>
+    ![image096](./images/media/image096.png)
 
 4. Save the changes, then close the **application-config.xml** file.
 
@@ -837,23 +837,23 @@ You will now use **includes** to structure the server configuration.
 
     The Liberty configuration assistant shows you the available elements.
 
-    <kbd>![image097](./images/media/image097.png)</kbd>
+    ![image097](./images/media/image097.png)
 
 6. Select **include** and the element gets generated. As value for **location**, enter **"application-config.xml"**.
 
-    <kbd>![image098](./images/media/image098.png)</kbd>
+    ![image098](./images/media/image098.png)
 
 7. As the owner of the server.xml file, you might want to decide what happens if the file to be included does not exist or contains conflicting configuration settings. 
 
     Go to the end of the include statement and press **CTRL+SPACE**. The available attributes for the include element are displayed.
 
-    <kbd>![image099](./images/media/image099.png)</kbd>
+    ![image099](./images/media/image099.png)
 
     As you can see, you could define the include file as optional, so Liberty would not throw an error if the include file is missing. 
 
 8. Click **onConflict** to see the available attributes for that options. 
 
-    <kbd>![image100](./images/media/image100.png)</kbd>
+    ![image100](./images/media/image100.png)
 
     If you want to make sure, that settings in the server.xml cannot be overridden by included files, select **IGNORE**, otherwise use **MERGE** or **REPLACE**. 
     
@@ -861,7 +861,7 @@ You will now use **includes** to structure the server configuration.
 
         <include location="application-config.xml" onConflict="MERGE"/>
 
-    <kbd>![image101](./images/media/image101.png)</kbd>
+    ![image101](./images/media/image101.png)
 
 
     You can configure multiple include files, for example one file for security-config.xml and another one for resource specific configuration settings like for databases or JMS. Now let's test if the **include** works.
@@ -873,7 +873,7 @@ You will now use **includes** to structure the server configuration.
 
     As you can see, the **include** has been found and processed, so that the application is started.
 
-    <kbd>![image102](./images/media/image102.png)</kbd>
+    ![image102](./images/media/image102.png)
 
     Keep the server running as we need it in the next section.
 
@@ -889,11 +889,11 @@ Right now, you are not able to access Liberty via HTTPS. While the HTTPS port 94
 
     Alternatively, you can use the configuration assistant to enable it.
 
-    <kbd>![image103](./images/media/image103.png)</kbd>
+    ![image103](./images/media/image103.png)
 
 3. Take a look at the logs and you can see that the feature is not available yet.
 
-    <kbd>![image104](./images/media/image104.png)</kbd>
+    ![image104](./images/media/image104.png)
 
     This is due to the fact that the Liberty server package generated by the developer only includes the required features (features that have been defined in the server configuration file). You will use the Liberty **featureUtility tool** to install the missing feature. The feature could be downloaded from a local repository if configured, in this case you will download it from a central maven repository.
 
@@ -903,19 +903,19 @@ Right now, you are not able to access Liberty via HTTPS. While the HTTPS port 94
 
         wlp/bin/featureUtility installFeature transportSecurity-1.0
 
-    <kbd>![image105](./images/media/image105.png)</kbd>
+    ![image105](./images/media/image105.png)
 
 5. Then start the Liberty instance again by running the following command:
 
         wlp/bin/server run defaultServer
 
-    <kbd>![image106](./images/media/image106.png)</kbd>
+    ![image106](./images/media/image106.png)
 
     As you can see, Liberty created a certificate and placed it into the SSL key file **"wlp/usr/servers/defaultServer/resources/security/key.p12"**. 
 
 6. Liberty used the variable **keystore_password** to secure the keystore. As you did not define a value for the variable keystore_password, Liberty generated a password and stored it in the **server.env** file. In Visual Studio, open the **server.env** file to see the keystore password. Your password will likely look different as it has been generated randomly.
 
-    <kbd>![image107](./images/media/image107.png)</kbd>
+    ![image107](./images/media/image107.png)
 
     Close the **server.env** file.
 
@@ -925,7 +925,7 @@ Right now, you are not able to access Liberty via HTTPS. While the HTTPS port 94
 
     The keyStore element also allows you to specify a different keystore location and much more.
 
-    <kbd>![image108](./images/media/image108.png)</kbd>
+    ![image108](./images/media/image108.png)
 
 8. Review your configuration in **server.xml**. It should look like this:
 
@@ -965,15 +965,15 @@ Right now, you are not able to access Liberty via HTTPS. While the HTTPS port 94
 
     You should get a security warning like this:
 
-    <kbd>![image109](./images/media/image109.png)</kbd>
+    ![image109](./images/media/image109.png)
 
 10. Click **Advanced**, then scroll down and click **Accept the Risk and Continue**.
 
-    <kbd>![image110](./images/media/image110.png)</kbd>
+    ![image110](./images/media/image110.png)
 
 11. You should see the output of the web application.
 
-    <kbd>![image111](./images/media/image111.png)</kbd>
+    ![image111](./images/media/image111.png)
 
 12. Switch back to Visual Studio Code and stop the running Liberty instance by entering **CTRL+C** in the terminal window. 
 
@@ -991,13 +991,13 @@ You will re-use the generated configuration snippets and other assets in the nex
 
         cp ~/Student/ops/test/wlp/usr/servers/defaultServer/apps/simpleweb.war ~/Student/assets
 
-    <kbd>![image112](./images/media/image112a.png)</kbd>
+    ![image112](./images/media/image112a.png)
 
 2. Verify that the assets directory contains the application WAR as well as the configuration files. It also contains the server package but this is no longer required.
 
         ls ~/Student/assets
 
-    <kbd>![image112](./images/media/image112b.png)</kbd>
+    ![image112](./images/media/image112b.png)
 
 
 ### 3.2.5 Recap
@@ -1031,37 +1031,37 @@ The best practice for Liberty installation is to create a minimal installation b
 
         mkdir ~/Student/ops/software
     
-    <kbd>![image113](./images/media/image113.png)</kbd>
+    ![image113](./images/media/image113.png)
     
 3. Download and store the Liberty kernel image. 
 
         wget https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/24.0.0.1/wlp-kernel-24.0.0.1.zip -P ~/Student/ops/software
     
-    <kbd>![image114](./images/media/image114.png)</kbd>
+    ![image114](./images/media/image114.png)
 
 4. Use **ls** command to see that the kernel image is less than 17 MB in size. The overall disk footprint will be larger depending on the required Liberty features.
 
         ls -lrt ~/Student/ops/software/
     
-    <kbd>![image115](./images/media/image115.png)</kbd>
+    ![image115](./images/media/image115.png)
 
 5. Create a directory for the integration environment. This will be used for the Liberty installation.
 
         mkdir ~/Student/ops/int
         cd ~/Student/ops/int
 
-    <kbd>![image116](./images/media/image116.png)</kbd>
+    ![image116](./images/media/image116.png)
 
 6. Use the unzip command to extract the image.
 
         unzip ../software/wlp-kernel-24.0.0.1.zip
 
-    <kbd>![image117](./images/media/image117.png)</kbd>
+    ![image117](./images/media/image117.png)
 
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>On the IBM support page, you can find next to the convenience packages like the Liberty kernel package also Liberty archives for Liberty Core, Liberty Base or Liberty ND. To install such an archive, you would use a command like:
         <strong>"java -jar ../wlp-base-all-24.0.0.1.jar --acceptLicense ."</strong> 
@@ -1074,7 +1074,7 @@ The best practice for Liberty installation is to create a minimal installation b
 
         wlp/bin/productInfo version
 
-    <kbd>![image118](./images/media/image118.png)</kbd>
+    ![image118](./images/media/image118.png)
 
     As you can see, this is an ILAN package which can be used for evaluation as well as for production. 
 
@@ -1082,7 +1082,7 @@ The best practice for Liberty installation is to create a minimal installation b
 
         wlp/bin/productInfo featureInfo
 
-    <kbd>![image119](./images/media/image119.png)</kbd>
+    ![image119](./images/media/image119.png)
 
     As you can see, no feature is included in the kernel image.
 
@@ -1091,7 +1091,7 @@ The best practice for Liberty installation is to create a minimal installation b
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>As you have seen, the installation of Liberty is basically an unzip. <br>If you  want to update Liberty later on, you can either apply a jar file or simply replace the binaries.</p></td>
     </tr>
@@ -1125,13 +1125,13 @@ The **server create** command creates by default the user directory in a sub-dir
         echo "WLP_USER_DIR=/home/techzone/Student/ops/int/wlp_usr" > ~/Student/ops/int/wlp/etc/server.env
         cat ~/Student/ops/int/wlp/etc/server.env
 
-    <kbd>![image120](./images/media/image120.png)</kbd>
+    ![image120](./images/media/image120.png)
 
 2. Run the following commands to create a new server named **"myServer"**:
 
         wlp/bin/server create myServer
 
-    <kbd>![image121](./images/media/image121.png)</kbd>
+    ![image121](./images/media/image121.png)
 
     The new server is created in the following directory: **wlp_usr/servers/myServer**.
 
@@ -1139,25 +1139,25 @@ The **server create** command creates by default the user directory in a sub-dir
 
         wlp/bin/server list
 
-    <kbd>![image122](./images/media/image122.png)</kbd>
+    ![image122](./images/media/image122.png)
 
 4. Run the following command to list the files and directories that have been created for myServer:
 
         ls -lrt wlp_usr/servers/myServer
 
-    <kbd>![image123](./images/media/image123.png)</kbd>
+    ![image123](./images/media/image123.png)
 
 5. Replace the generated Liberty configuration with the configuration that you stored in the assets directory.
 
         cp ~/Student/assets/server.* wlp_usr/servers/myServer
         ls -lrt wlp_usr/servers/myServer
 
-    <kbd>![image124](./images/media/image124.png)</kbd>
+    ![image124](./images/media/image124.png)
 
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>In the Liberty setup, you now have a <strong>server.env</strong> file on two levels: <br>
         - on <strong>runtime level</strong> at <strong>${wlp.install.dir}/etc/server.env</strong> and <br>
@@ -1172,12 +1172,12 @@ The **server create** command creates by default the user directory in a sub-dir
 
         cat wlp_usr/servers/myServer/server.xml | grep http
 
-    <kbd>![image125](./images/media/image125.png)</kbd>
+    ![image125](./images/media/image125.png)
 
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>If you want to change those port values, you could define them in the <strong>server.env</strong> file or <strong>bootstrap.properties</strong> file for example. <br> Alternatively you could define the related variable on the operating system level. 
     </p></td>
@@ -1194,7 +1194,7 @@ You installed the Liberty kernel package which does not contain any features. Th
 
         wlp/bin/featureUtility installServerFeatures myServer
 
-    <kbd>![image126](./images/media/image126.png)</kbd>
+    ![image126](./images/media/image126.png)
 
     As you can see, the command detected that the features for **servlet-6.0** and **transportSecurity-1.0** were missing. It also downloads the feature **ssl-1.0** as **transportSecurity-1.0** depends on it.
 
@@ -1202,7 +1202,7 @@ You installed the Liberty kernel package which does not contain any features. Th
 
         wlp/bin/productInfo featureInfo
 
-    <kbd>![image127](./images/media/image127.png)</kbd>
+    ![image127](./images/media/image127.png)
 
 ### 4.5	Use your own keystore
 
@@ -1212,7 +1212,7 @@ If you do not create a keystore but enable SSL, Liberty will create a keystore w
 
         wlp/bin/securityUtility createSSLCertificate --server=myServer --password=mySecret
 
-    <kbd>![image128](./images/media/image128.png)</kbd>
+    ![image128](./images/media/image128.png)
 
     As you can see, the command uses the hostname and server name as subjectDN and encodes the password using xor. The command also allows to use aes encoding or encryption, see https://www.ibm.com/docs/en/was-liberty/base?topic=applications-securityutility-command.
 
@@ -1222,13 +1222,13 @@ If you do not create a keystore but enable SSL, Liberty will create a keystore w
         cat wlp_usr/servers/myServer/server.xml | grep trans
         cat wlp_usr/servers/myServer/server.xml | grep keystore
 
-    <kbd>![image129](./images/media/image129.png)</kbd>
+    ![image129](./images/media/image129.png)
 
 3. The keystore password has been configured in the server.env file. Use the following command for review the settings:
 
         cat wlp_usr/servers/myServer/server.env;echo
 
-    <kbd>![image130](./images/media/image130.png)</kbd>
+    ![image130](./images/media/image130.png)
 
     As expected, the password used for the keystore does not match to the one in **server.env** and must be updated. 
     
@@ -1237,12 +1237,12 @@ If you do not create a keystore but enable SSL, Liberty will create a keystore w
         echo "keystore_password=$(wlp/bin/securityUtility encode --encoding=aes mySecret)" > wlp_usr/servers/myServer/server.env
         cat wlp_usr/servers/myServer/server.env
 
-    <kbd>![image131](./images/media/image131.png)</kbd>
+    ![image131](./images/media/image131.png)
 
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>The encoded keystore password is not unique, so you might have a different password as in the screenshot above. <br> 
         But as long as you use the same password to be encoded, all of the different resulting strings are valid. 
@@ -1258,7 +1258,7 @@ If you do not create a keystore but enable SSL, Liberty will create a keystore w
         wlp/bin/server start myServer
         tail -f wlp_usr/servers/myServer/logs/messages.log
 
-    <kbd>![image132](./images/media/image132.png)</kbd>
+    ![image132](./images/media/image132.png)
 
     As you can see, the Liberty server is running and listens on port **9080** and **9443**. You can also see that it complains about the **missing include file application-config.xml**. You will fix this later.
 
@@ -1266,7 +1266,7 @@ If you do not create a keystore but enable SSL, Liberty will create a keystore w
     
     As before, you will get a warning that your connection is not secure. Click **Advanced**, scroll down and click **"Accept the Risk and Continue"**. Then you should be able to access the application.
 
-    <kbd>![image133](./images/media/image133.png)</kbd>
+    ![image133](./images/media/image133.png)
 
 3. Switch back to the terminal window and press **CTRL+C** in the terminal window to stop the tail command.
 
@@ -1288,7 +1288,7 @@ The **dropins** directory can be used for applications that do not require extra
 
 2. **Right-click** on **Terminal** and select **New Window** to open a second terminal window.
 
-    <kbd>![image134](./images/media/image134.png)</kbd>
+    ![image134](./images/media/image134.png)
 
 3. In the new Terminal window, navigate to the int directory:
 
@@ -1298,22 +1298,22 @@ The **dropins** directory can be used for applications that do not require extra
 
         cp ~/Student/assets/simpleweb.war wlp_usr/servers/myServer/dropins
 
-    <kbd>![image135](./images/media/image135.png)</kbd>
+    ![image135](./images/media/image135.png)
 
 5. Switch to the terminal window where tail command is running. You can see messages that the application deployment has taken place, the application simpleweb application has been started and is available at **http://rhel9.techxchange.local:9080/simpleweb/**.
     
     Be aware that Liberty defined the context root based on the name of the WAR file as **"/simpleweb"**.
 
-    <kbd>![image136](./images/media/image136.png)</kbd>
+    ![image136](./images/media/image136.png)
 
 
 6. Verify that the application is accessible by opening a browser at: **http://localhost:9080/simpleweb/helloWorld**
 
-    <kbd>![image137](./images/media/image137.png)</kbd>
+    ![image137](./images/media/image137.png)
 
 7. In the terminal window where tail is running, you can see that the application has been accessed.
 
-    <kbd>![image138](./images/media/image138.png)</kbd>
+    ![image138](./images/media/image138.png)
 
 8. Switch back to the terminal where you entered the copy command and remove the deployed application from the dropins directory using the following command:
 
@@ -1321,7 +1321,7 @@ The **dropins** directory can be used for applications that do not require extra
 
 9. Switch back to the terminal window where tail is running. You can see that the application has been removed.
 
-    <kbd>![image139](./images/media/image139.png)</kbd>
+    ![image139](./images/media/image139.png)
 
     While the dropins directory can be used for applications that do not require extra configuration, deploying the application by adding it to the Liberty server configuration provides the freedom to configure the Liberty server based on the application configuration requirements. 
 
@@ -1334,13 +1334,13 @@ The **dropins** directory can be used for applications that do not require extra
         cp ~/Student/assets/simpleweb.war wlp_usr/servers/myServer/apps
         ls -lrt wlp_usr/servers/myServer/apps/*.war
 
-    <kbd>![image140](./images/media/image140.png)</kbd>
+    ![image140](./images/media/image140.png)
 
 11. To define the application in the Liberty configuration file, take a look at the application configuration that has been provided as snippet.
 
         cat ~/Student/assets/application-config.xml
 
-    <kbd>![image141](./images/media/image141.png)</kbd>
+    ![image141](./images/media/image141.png)
 
     As you can see, a different context root has been defined.
 
@@ -1348,23 +1348,23 @@ The **dropins** directory can be used for applications that do not require extra
 
         cat wlp_usr/servers/myServer/server.xml | grep include
 
-    <kbd>![image142](./images/media/image142.png)</kbd>
+    ![image142](./images/media/image142.png)
 
 13. Copy the **application-config.xml** into the server directory.
 
         cp ~/Student/assets/application-config.xml wlp_usr/servers/myServer
         ls -lrt wlp_usr/servers/myServer
 
-    <kbd>![image143](./images/media/image143.png)</kbd>
+    ![image143](./images/media/image143.png)
 
 14. Switch back to the terminal window running tail. You can see that the application **simpleweb** gets deployed, this time with the context root **mysimpleweb**. 
 
-    <kbd>![image144](./images/media/image144.png)</kbd>
+    ![image144](./images/media/image144.png)
 
 
 15. Finally test the application in the browser via URL **http://localhost:9080/mysimpleweb/helloWorld**. 
 
-    <kbd>![image145](./images/media/image145.png)</kbd>
+    ![image145](./images/media/image145.png)
 
 
 **You have successfully deployed the web application into Liberty, first via dropins directory, then by adding it to the server.xml file via include.**
@@ -1379,7 +1379,7 @@ In this case, you want to add/change the log level of the application server.
 
         mkdir -p wlp_usr/servers/myServer/configDropins/overrides
 
-    <kbd>![image146](./images/media/image146.png)</kbd>
+    ![image146](./images/media/image146.png)
 
 
     **Add INFO logging output to console**
@@ -1397,7 +1397,7 @@ In this case, you want to add/change the log level of the application server.
     <table>
     <tbody>
     <tr class="odd">
-    <td width=80><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td width=80><img src="./images/media/info.png" alt="sign-info" /></td>
     <td>
     <p>Note: <br>
         It is also possible to set default logging options in the bootstrap.properties file. <br>
@@ -1414,7 +1414,7 @@ In this case, you want to add/change the log level of the application server.
 
         tail -f wlp_usr/servers/myServer/logs/console.log
 
-    <kbd>![image147](./images/media/image147.png)</kbd>
+    ![image147](./images/media/image147.png)
 
 4. Switch to the second terminal window. Create a server configuration file to change the console log level to INFO via the following command:
 
@@ -1424,11 +1424,11 @@ In this case, you want to add/change the log level of the application server.
         </server>
         ' > wlp_usr/servers/myServer/configDropins/overrides/loglevel-config.xml
 
-    <kbd>![image148](./images/media/image148.png)</kbd>
+    ![image148](./images/media/image148.png)
 
 5. Switch to the terminal window running tail to verify, that the new file has been detected.
 
-    <kbd>![image149](./images/media/image149.png)</kbd>
+    ![image149](./images/media/image149.png)
 
     You will verify that messages of log level **INFO** will now be logged during the configuration of tracing.
 
@@ -1448,11 +1448,11 @@ In this case, you want to add/change the log level of the application server.
         </server>
         ' > wlp_usr/servers/myServer/configDropins/overrides/loglevel-config.xml
 
-    <kbd>![image150](./images/media/image150.png)</kbd>
+    ![image150](./images/media/image150.png)
 
 7. Switch to the terminal window running tail to verify, that the new file has been detected.
 
-    <kbd>![image151](./images/media/image151.png)</kbd>
+    ![image151](./images/media/image151.png)
 
     As you can see, messages of log level **INFO** are displayed now which means that the change of the consoleLogLevel has been picked up. <br>
     The message indicates as expected, that the trace level has been set to “webcontainer=all”. 
@@ -1461,7 +1461,7 @@ In this case, you want to add/change the log level of the application server.
 
         ls -lrt wlp_usr/servers/myServer/logs
 
-    <kbd>![image152](./images/media/image152.png)</kbd>
+    ![image152](./images/media/image152.png)
 
 9. Remove the file to set the trace level back to default. 
 
@@ -1469,7 +1469,7 @@ In this case, you want to add/change the log level of the application server.
 
 10. Switch to the terminal window running tail to verify, that the new file has been detected.
 
-    <kbd>![image153](./images/media/image153.png)</kbd>
+    ![image153](./images/media/image153.png)
 
     As you can see, the trace specification has been changed back to **"\*=info"**.
 
@@ -1499,13 +1499,13 @@ In this case, you want to add/change the log level of the application server.
         echo 'com.ibm.ws.logging.console.format=json' > wlp_usr/servers/myServer/bootstrap.properties
         cat wlp_usr/servers/myServer/bootstrap.properties
 
-    <kbd>![image154](./images/media/image154.png)</kbd>
+    ![image154](./images/media/image154.png)
 
 15. Start the server via **server run** and you can see that the log format has been set to JSON.
 
         wlp/bin/server run myServer
 
-    <kbd>![image155](./images/media/image155.png)</kbd>
+    ![image155](./images/media/image155.png)
 
 
 16. In the terminal window, press **CTRL+C** to stop the server.
@@ -1515,7 +1515,7 @@ In this case, you want to add/change the log level of the application server.
         rm wlp_usr/servers/myServer/bootstrap.properties
         wlp/bin/server run myServer
 
-    <kbd>![image156](./images/media/image156.png)</kbd>
+    ![image156](./images/media/image156.png)
 
 18. In the terminal, press **CTRL+C** to stop the server.
 
@@ -1532,7 +1532,7 @@ If you use several includes or config dropins, you might run into the situation 
 
         wlp/bin/securityUtility encode --encoding=aes LibertyIsGreat
 
-    <kbd>![image157](./images/media/image157.png)</kbd>
+    ![image157](./images/media/image157.png)
 
     As before, the encoded password is not unique, so your output will likely look different that the one above. But both are valid.
 
@@ -1549,13 +1549,13 @@ If you use several includes or config dropins, you might run into the situation 
         </server>
         ' > wlp_usr/servers/myServer/configDropins/overrides/rest-config.xml
 
-    <kbd>![image158](./images/media/image158.png)</kbd>
+    ![image158](./images/media/image158.png)
 
     b. As the restConnector feature is not installed so far, switch to a terminal window to install the missing features via command:
 
         wlp/bin/featureUtility installServerFeatures myServer
 
-    <kbd>![image159](./images/media/image159.png)</kbd>
+    ![image159](./images/media/image159.png)
 
 4. Start the Liberty instance by using the command:
 
@@ -1564,19 +1564,19 @@ If you use several includes or config dropins, you might run into the situation 
 5. From a browser window, access the Liberty REST APIs via the URL **https://localhost:9443/ibm/api/config**. <br>
     Enter Username/Password as: **admin**/**LibertyIsGreat**.
 
-    <kbd>![image160](./images/media/image160.png)</kbd>
+    ![image160](./images/media/image160.png)
 
 6. If asked, don’t save the password in the browser. Your browser should display something like this:
 
-    <kbd>![image161](./images/media/image161.png)</kbd>
+    ![image161](./images/media/image161.png)
 
 7. In the browser window, press **CTRL+F** and enter **webapp** to search for webapp. You should find the related settings.
 
-    <kbd>![image162](./images/media/image162.png)</kbd>
+    ![image162](./images/media/image162.png)
 
 8. Search for **logging** and you get all attributes currently used for logging.
 
-    <kbd>![image163](./images/media/image163.png)</kbd>
+    ![image163](./images/media/image163.png)
 
 9. Finally stop the server and remove the restConnector configuration.
 
@@ -1594,13 +1594,13 @@ The Liberty **AdminCenter** can be used to monitor the status of the Liberty ser
 
             wlp/bin/securityUtility encode --encoding=xor Liberty4Admins
 
-    <kbd>![image164](./images/media/image164.png)</kbd>
+    ![image164](./images/media/image164.png)
 
 2. Create a password as **Liberty4Readers** for the second user.
 
             wlp/bin/securityUtility encode --encoding=xor Liberty4Readers
 
-    <kbd>![image165](./images/media/image165.png)</kbd>
+    ![image165](./images/media/image165.png)
 
 3. Execute the following command to Configure the AdminCenter with the two users using the generated passwords generated before.
 
@@ -1625,70 +1625,70 @@ The Liberty **AdminCenter** can be used to monitor the status of the Liberty ser
         </server>
         ' > wlp_usr/servers/myServer/configDropins/overrides/adminCenter-config.xml
 
-    <kbd>![image166](./images/media/image166.png)</kbd>
+    ![image166](./images/media/image166.png)
 
 4. As the AdminCenter feature is not installed so far, switch to a terminal window to install the feature via command:
 
         wlp/bin/featureUtility installServerFeatures myServer
     
-    <kbd>![image167](./images/media/image167.png)</kbd>
+    ![image167](./images/media/image167.png)
 
 5. Start the server and take a look at the log:
 
         wlp/bin/server start myServer
         tail -f wlp_usr/servers/myServer/logs/messages.log
 
-    <kbd>![image168](./images/media/image168.png)</kbd>
+    ![image168](./images/media/image168.png)
 
     As you can see, the AdminCenter feature **adminCenter-1.0** has been enabled. 
     
 6. Access the Liberty Admin Center via URL **https://localhost:9443/adminCenter**, then enter the credentials for the admin user (**admin**/**Liberty4Admins**) and press **Submit**.
 
-    <kbd>![image169](./images/media/image169.png)</kbd>
+    ![image169](./images/media/image169.png)
     The Admin Center Toolbox is displayed.
 
 7. Click **Explore** to explore the Liberty status, the applications as well monitoring data and configuration.
 
-    <kbd>![image170](./images/media/image170.png)</kbd>
+    ![image170](./images/media/image170.png)
 
 8. On the tab **Overview** take a look at the running servers and applications. 
 
-    <kbd>![image171](./images/media/image171.png)</kbd>
+    ![image171](./images/media/image171.png)
 
     You would see more than one server if a collection would have been defined.
 
 9. On the tab **Applications** you can see the running applications. As user with admin rights, you can use the menu to start, stop or restart an application.
 
-    <kbd>![image172](./images/media/image172.png)</kbd>
+    ![image172](./images/media/image172.png)
 
 10. On the tab **Montor**, you can see basic performance data. 
 
-    <kbd>![image173](./images/media/image173.png)</kbd>
+    ![image173](./images/media/image173.png)
 
     As you can see here, the Used Heap Memory max value above 1.9 MB which indicates that max heap has not been defined. You will change that in the next section of the lab.
 
 11. On the tab **Configure**, you can see current configuration. 
 
-    <kbd>![image174](./images/media/image174.png)</kbd>
+    ![image174](./images/media/image174.png)
 
     You can see a warning that remote file access is not configured. You can ignore that as you will not configure Liberty via AdminCenter. <br>
     But you could click the link to see the configuration in design and source view.
 
 12. Select to log out as admin.
 
-    <kbd>![image175](./images/media/image175.png)</kbd>
+    ![image175](./images/media/image175.png)
 
 13. Log in as user **reader** with password **Liberty4Readers**.
 
-    <kbd>![image176](./images/media/image176.png)</kbd>
+    ![image176](./images/media/image176.png)
 
 14. Click **Explore**, then select the tab **Applications**. Try to click the twisty next to the **simpleweb** application and you can see that you are not auithorized to start or stop an application.
 
-    <kbd>![image177](./images/media/image177.png)</kbd>
+    ![image177](./images/media/image177.png)
 
 15. Select to log out as reader.
 
-    <kbd>![image178](./images/media/image178.png)</kbd>
+    ![image178](./images/media/image178.png)
 
 16. In the terminal window, press **CRTL+C** to stop the tail command. 
 
@@ -1711,7 +1711,7 @@ The generic JVM arguments are used to configure and adjust how the JVM executes.
         ' > wlp_usr/servers/myServer/jvm.options
         cat wlp_usr/servers/myServer/jvm.options
 
-    <kbd>![image179](./images/media/image179.png)</kbd>
+    ![image179](./images/media/image179.png)
 
 2. Start the server with the updated JVM options.
 
@@ -1719,11 +1719,11 @@ The generic JVM arguments are used to configure and adjust how the JVM executes.
 
 3. Access the Liberty Admin Center again via URL **https://localhost:9443/adminCenter**. Log in as user reader with password Liberty4Readers.
 
-    <kbd>![image176](./images/media/image176.png)</kbd>
+    ![image176](./images/media/image176.png)
 
 4. Click **Explore**, then select **Monitor**. Take a look at the dashboard and you can see that the Used Heap Memory Max is now 500 MB as defined in jvm.options.
 
-    <kbd>![image180](./images/media/image180.png)</kbd>  
+    ![image180](./images/media/image180.png)  
 
 5. Log out from admin center.
 
