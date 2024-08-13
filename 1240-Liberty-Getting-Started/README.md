@@ -1286,11 +1286,11 @@ The **dropins** directory can be used for applications that do not require extra
         wlp/bin/server start myServer
         tail -f wlp_usr/servers/myServer/logs/messages.log
 
-2. **Right-click** on **Terminal** and select **New Window** to open a second terminal window.
+2. **Right-click** on **terminal** and select **New Window** to open a second terminal window.
 
     ![image134](./images/media/image134.png)
 
-3. In the new Terminal window, navigate to the int directory:
+3. In the new terminal window, navigate to the int directory:
 
         cd ~/Student/ops/int/
 

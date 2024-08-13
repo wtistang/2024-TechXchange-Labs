@@ -152,7 +152,7 @@ To simplify the lab and to allow you to focus on the migration bundle, certain s
     
     ![](./images/media/image011.png)
         
-    b.  Click **Terminal** icon to open a terminal window.
+    b.  Click the **terminal** icon to open a terminal window.
 
     ![](./images/media/image012.png)
     
@@ -470,7 +470,7 @@ The **server.xml** file defines a set of **features** that the application requi
 
 1. Review the **server.xml** file
 
-    Using the **gedit** editor in a **Terminal** window, open the **server.xml** file located in the Liberty server
+    Using the **gedit** editor in a **terminal** window, open the **server.xml** file located in the Liberty server
 
         gedit /home/techzone/wlp/usr/servers/pbwserver/server.xml
 

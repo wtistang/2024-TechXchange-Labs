@@ -111,7 +111,7 @@ You can deploy it virtually anywhere through containers that are supported by Re
 
 2. Clone the GitHub repo to download the lab artifacts and Linux shell scripts that are used in the lab. Then, set execute permissions for the scripts. 
 
-    a. Open a Terminal window on the VM by clicking the terminal icon on the Desktop.
+    a. Open a terminal window on the VM by clicking the terminal icon on the Desktop.
     
     ![](./lab1-media/media/image0010.png)
 
@@ -119,7 +119,7 @@ You can deploy it virtually anywhere through containers that are supported by Re
 
         cd /home/ibmuser
 
-    c. From the Terminal window, run the following command to clone the repo:
+    c. From the terminal window, run the following command to clone the repo:
 
         git clone https://github.com/IBMTechSales/WAS-Automation-LabFiles.git
 
@@ -144,7 +144,7 @@ You can deploy it virtually anywhere through containers that are supported by Re
 
         cd /home/ibmuser/WAS-Automation-LabFiles/techxchange
 
-2. Run the `errata.sh` shell script to fix a known issue in our lab environment:
+2. Run the **errata.sh** shell script to fix a known issue in our lab environment:
 
         sudo ./errata.sh
 
@@ -160,11 +160,11 @@ The following configuration tasks must be completed to use the Fix Deployment fe
 
 You run a Linux shell script, which automates the setup process. The script performs the following tasks:
 
-  - Create the `ssh key`
+  - Create the **ssh key**
   - Copy the key over to the WAS server to be monitored
-  - Create the `wsa-ansible` secret that contains the key
-  - Create the `known_hosts` file
-  - Create the `wsa-secure-fixcentral-creds` secret that contains the IBM ID credentials to access IBM Fix Central
+  - Create the **wsa-ansible** secret that contains the key
+  - Create the **known_hosts** file
+  - Create the **wsa-secure-fixcentral-creds** secret that contains the IBM ID credentials to access IBM Fix Central
 
 First, you must verify that IBM WebSphere Automation is in the "Ready" state. 
 
@@ -172,7 +172,7 @@ First, you must verify that IBM WebSphere Automation is in the "Ready" state.
 
 1. Log in to Red Hat OpenShift CLI:
 
-    a. Open a new Terminal window in the VM.
+    a. Open a new terminal window in the VM.
   
     b. Type the following command to log in to Red Hat OpenShift. 
 
@@ -199,7 +199,7 @@ First, you must verify that IBM WebSphere Automation is in the "Ready" state.
 
         oc get wsa
 
-   **Note:** The output must indicate that the WSA resource **`READY`** state is **`True`** before you can continue with the lab.  
+   **Note:** The output must indicate that the WSA resource **READY** state is **True** before you can continue with the lab.  
 
     ![](./lab1-media/media/image72.png)
 
@@ -440,7 +440,7 @@ After defining an exposure mitigation plan, administrators can then use the WebS
 
 
 
-<br>
+
 
 ### 4.3 Working with Traditional WebSphere servers with IBM Automation – Security Vulnerabilities
 
@@ -559,7 +559,7 @@ There are a couple of additional components in the product to support this use c
 
   - **Fix manager**
     
-    The WebSphere Automation *fix manager* uses credentials that you provide to access IBM Fix Central to request fixes. Fixes are fetched and stored in the file storage defined for the `websphereSecure` custom resource. The fix manager manages the storage space according to frequency of use, deleting older fixes to make room for more recently requested fixes.
+    The WebSphere Automation *fix manager* uses credentials that you provide to access IBM Fix Central to request fixes. Fixes are fetched and stored in the file storage defined for the **websphereSecure** custom resource. The fix manager manages the storage space according to frequency of use, deleting older fixes to make room for more recently requested fixes.
 
   - **Installation manager**
   
@@ -665,7 +665,7 @@ After you select the fix, WebSphere Automation provides two options:
 
 2. Stop the WebSphere Application Server: 
 
-    a. Return to a Terminal window in the VM
+    a. Go to a terminal window in the VM
 
     b. Run the **stopServer.sh** command below 
     
@@ -724,28 +724,32 @@ After you select the fix, WebSphere Automation provides two options:
     > ![](./lab1-media/media/image97.png)
 
 
-5. Restart the WebSphere Application Server: 
+5. Restart the WebSphere Application Server. 
 
-    a. Return to a Terminal window in the VM
+    a. Go to to a terminal window in the VM.
 
-    b. Run the `startServer.sh` command below 
+    b. Run the following **startServer.sh** command: 
     
         /opt/IBM/WebSphere/AppServer9057/bin/startServer.sh tWAS_9057_server
 
     ![](./lab1-media/media/image89-3.png)    
 
 
-    |        |           |  
-    | ------------- |:-------------|
-    | ![](./lab1-media/media/image4.png?cropResize=50,50)   | <strong>TIP:</strong> <br>IBM WebSphere Automation will START WebSphere Application Servers after it installs a fix, if and only if, IBM WebSphere Automation Stopped the server. <p> However, in this lab, you manually stopped WebSphere Application Server, so WebSphere Automation did NOT restart it.    
-
-    <br/>
+<table>
+    <tbody>
+    <tr class="odd">
+    <td width=80><img src="./lab1-media/media/image4.png" alt="sign-info" /></td>
+    <td>
+    <p><strong>TIP:</strong> <br>IBM WebSphere Automation will START WebSphere Application Servers after it installs a fix, if and only if, IBM WebSphere Automation Stopped the server. <p> However, in this lab, you manually stopped WebSphere Application Server, so WebSphere Automation did NOT restart it. 
+    </p></td>
+    </tr>
+    </tbody>
+    </table>
 
 **Congratulations!** You successfully applied the iFix to resolve the critical CVE on the tWAS_9057_server. 
 
 In the next section of the lab, you review the updated security posture and fix history of the WebSphere server. 
 
-<br>
 
 
 ### 4.3.3 View the security posture and Fix History of your WebSphere servers
@@ -780,9 +784,18 @@ Since you applied the PH42762 iFix, now you can examine the updated security pos
     > 
     > However, there are additional iFixes that do not have a Fixed date. That is because these fixes were already applied to the server prior to it being registered with IBM WebSphere Automation.
 
-    |                                                |                                                                                                                                                                                                                                                                                                                           |
-    | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | ![sign-info](./lab1-media/media/image4.png) | IBM WebSphere Automation reports ALL iFixes that were applied, regardless of when they were applied. However. It can only determine fix dates, number of days that the server was vulnerable, and vulnerability detected date for servers from the time the WebSphere Application Server is registered with IBM WebSphere Automation. |
+   
+    
+<table>
+    <tbody>
+    <tr class="odd">
+    <td width=80><img src="./lab1-media/media/image4.png" alt="sign-info" /></td>
+    <td>
+    <p>IBM WebSphere Automation reports ALL iFixes that were applied, regardless of when they were applied. However. It can only determine fix dates, number of days that the server was vulnerable, and vulnerability detected date for servers from the time the WebSphere Application Server is registered with IBM WebSphere Automation. 
+    </p></td>
+    </tr>
+    </tbody>
+    </table>
 
 2.  View the **tWAS_9057_server** CVE Vulnerabilities details.
     
@@ -839,8 +852,6 @@ Since you applied the PH42762 iFix, now you can examine the updated security pos
 
 **Congratulations!**  You completed the proactive CVE management lab for traditional WebSphere Application Servers.      
 
-</br>
-
 
 ## Section 5 - Detect and trigger investigation of Application Memory Leak with IBM WebSphere Automation
 
@@ -890,16 +901,16 @@ WSA also allows you to download all the files that you need to share with your a
 
 For this lab, the Instana agent has already been installed on the VM. 
 
-However, installing the Instana agent is simple. Using the Instana UI, you can select options for installing the agent, such as the `agent mode`, `agent runtime`, and `installation mode`. Doing so, produces a `curl command` that you run from a Terminal window, to install the Linux agent. 
+However, installing the Instana agent is simple. Using the Instana UI, you can select options for installing the agent, such as the **agent mode**, **agent runtime**, and **installation mode**. Doing so, produces a **curl command** that you run from a terminal window, to install the Linux agent. 
 
-1. Check that the Instana agent process is running. You should see the Instana Java process listed. 
+1. Check that the Instana agent process is running by issuing the following command in a terminal window. You should see the Instana Java process listed. 
 
         ps -ef | grep instana
 
     ![](./lab2-media/media/4310-instana-process-pid.png)
 
      
-    **Tip:** The Instana agent is installed in **/opt/instana/agent** directory.
+    **Tip:** The Instana agent is installed in the **/opt/instana/agent** directory.
 
 
 2. Login to the Instana UI
@@ -916,6 +927,8 @@ However, installing the Instana agent is simple. Using the Instana UI, you can s
  
      > Password: **qJgN6hS6sE**
 
+    **Note:** If necessary, accept all the browser security warnings and certificates. In Firefox, click **Advanced**, and then scroll down and click **Accept the risk and continue**. 
+
 3.  Verify the Instana agent installation
 
     a. Click the **Infrastructure** icon on the left navigation bar. 
@@ -926,7 +939,7 @@ However, installing the Instana agent is simple. Using the Instana UI, you can s
 
     ![](./lab2-media/media/4310-infrastructure-zone.png)
 
-    b. Click `Time Rage` dropdown button, select `Last 5 minutes` and click `Live`.
+    b. Click **Time Rage** dropdown button, select **Last 5 minutes** and click **Live**.
 
     ![A screenshot of a computer Description automatically generated with medium confidence](./lab2-media/media/image28.png)
 
@@ -954,7 +967,7 @@ Configuring Instana to create alerts is outside the scope of this lab.
 
 The Instana configuration has already been performed, as required for the lab. 
 
-However, for your reference, the detailed steps for configuring Instana alerts for WebSphere Application Server is docuemnted in **`Appendix A`** of this lab guide. 
+However, for your reference, the detailed steps for configuring Instana alerts for WebSphere Application Server is docuemnted in **Appendix A** of this lab guide. 
 
 The high-level Instana configuration for the memory leak alert includes:
 
@@ -963,57 +976,58 @@ The high-level Instana configuration for the memory leak alert includes:
   - create a custom event
   - create an alert
  
-  </br>
 
-1.  View the `Custom payload` that was created for the lab
+1.  View the **Custom payload** that was created for the lab
 
     Adding a custom payload to your alert notifications enables you to use Instana alerts more efficiently.
 
-    a. From the Instana page, go to **`Settings > Team Settings`** page,
-    under **`Events & Alerts`**. Then click **`Custom Payload`**.
+    a. From the Instana page, go to **Settings > Team Settings** page,
+    under **Events & Alerts**. Then click **Custom Payload**.
 
-    b. You see the custom payload that is configred for the lab.
+    You see the custom payload that is configred for the lab.
 
-    In our case, alert notifications include a custom payload based on the automatically detected PID of the internal Process ID of the processes being monitored. 
+    
 
     ![Graphical user interface, application Description automatically
 generated](./lab2-media/media/4310-custom-payload-created.png)
 
-2.  View the `alert channel` that was created for the lab
+    In our case, alert notifications include a custom payload based on the automatically detected PID of the internal Process ID of the processes being monitored. 
+
+2.  View the **alert channel** that was created for the lab
 
     An Alert Channel is a mechanism that is used to get Events out of Instana and into another system when Events are trigger. There are a variety of Alert Channels including email notifications, slack, Watson AIOps, and more.
     
-    a.  On the Team Settings page, under **`Events & Alerts`**, click **`Alert Channels`**.
+    a.  On the **Team Settings** page, under **Events & Alerts**, click **Alert Channels**.
 
-    b. You see the alert channel named `WebSphere Automation Healing Webhook` that is configured for the lab.
+    You see the alert channel named **WebSphere Automation Healing Webhook** that is configured for the lab.
 
     ![Graphical user interface, application Description automatically
 generated](./lab2-media/media/4310-alert-channel-created.png)
    
 
-3.  View the `custom event` that was created for the lab
+3.  View the **custom event** that was created for the lab
 
     A Custom Event enables you to create issues or incidents based on an individual metric of any given entity.
     
-    a. On the Team Settings page, under **`Events & Alerts`**,
-    click **`Events`**.
+    a. On the **Team Settings** page, under **Events & Alerts**,
+    click **Events**.
 
-    b. In the `search field`, enter `memory usgae high` to filter the list of events.
+    b. In the **search field**, enter **memory usgae high** to filter the list of events.
 
-    b. You see the custom event named `Memory Usage High` that was configured for the lab.  
+    You see the custom event named **Memory Usage High** that was configured for the lab.  
 
     ![Graphical user interface, application Description automatically
  generated](./lab2-media/media/4310-custom-event-created.png)
 
 
-4.  View the  `alert` that was creatd for the lab
+4.  View the **alert** that was creatd for the lab
 
-    An Alert is raised when an `event` has triggered, such as `high memory usage over 80% for some period`. 
+    An Alert is raised when an **event** has triggered, such as **high memory usage over 80% for some period**. 
 
-    a. On the Team Settings page, under **`Events & Alerts`**,
-    click **`Alerts`**
+    a. On the **Team Settings** page, under **Events & Alerts**,
+    click **Alerts**
 
-    b. You see the Alert named `WbSphere Automation Healing Memory Leak` that was configured for the lab. 
+    You see the Alert named **WbSphere Automation Healing Memory Leak** that was configured for the lab. 
 
     ![Graphical user interface, application, Teams Description
  automatically generated](./lab2-media/media/4310-alert-created.png)
@@ -1027,7 +1041,7 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
 
 1.  Run the following Linux shell script to install a memory leak application in WebSphere Application Server, which will also restart the WebSphere application server to pick up the changes. 
 
-    a. From a Terminal window, ensure you are in the directory that where the script is located
+    a. From a terminal window, ensure you are in the directory that where the script is located
 
         cd /home/ibmuser/WAS-Automation-LabFiles/techxchange/lab2-MemoryLeak
     
@@ -1039,7 +1053,7 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
 
 2.  Login to WebSphere Automation, if you are not already logged in
   
-    a.  On the *Student VM*, open a browser and enter the following URL (there is a WebSphere Automation link on bookmark toolbar):
+    a.  On the **student** VM, open a browser and enter the following URL (there is a **IBM Automation** bookmark on the toolbar):
     
     <a href="https://cpd-websphere-automation.apps.ocp.ibm.edu/zen/#/homepage"><span class="underline">https://cpd-websphere-automation.apps.ocp.ibm.edu/zen/#/homepage</span></a>
 
@@ -1048,34 +1062,30 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
 	
 	<br>
 
-    b.  On the `Log in to IBM Cloud Pak` page, select the **`OpenShift authentication`** as the authentication type. Then click `Log in`
+    b.  On the **Log in to IBM Cloud Pak** page, select the **OpenShift authentication** as the authentication type. Then click **Log in**.
 
     ![openshift authentication](./lab1-media/media/image11.png)
  
     **Note:** If necessary, accept all the browser security warnings and certificates. In Firefox, click **Advanced**, and then scroll down and click **Accept the risk and continue**. 
 
-    <br>
 	
-    c.  Enter **`ocadmin`** as username and **`ibmrhocp`** as password. And click **`Log In`**.
+    c.  Enter **ocadmin** as username and **ibmrhocp** as password. And click **Log In**.
 
     ![login page](./lab1-media/media/image13.png)
 
-    <br/>
-
     
-    d.  At this point, you should be at the ***IBM Automation Welcome page*** 
+    At this point, you should be at the **IBM Automation Welcome page** 
 
     ![welcome page](./lab1-media/media/image14.png)
 
-    <br/>
 
-3.  Go to the `Application Runtimes` which shows the WebSphere servers registered with IBM Automation.
+3.  Go to the **Application Runtimes** which shows the WebSphere servers registered with IBM Automation.
 
     a. Click the menu icon in the upper left corner of the page.
 
       ![notification config](./lab1-media/media/image15.png)
 
-    b. Click **`Operate`**, and then select **`Application runtimes`**.
+    b. Click **Operate**, and then select **Application runtimes**.
   
     Application Runtimes represent the Traditional WebSphere and WebSphere Liberty servers that are registered with IBM Automation.
 
@@ -1096,11 +1106,10 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
     ![Graphical user interface, text, application Description
   automatically generated](./lab2-media/media/image56.png)
 
-5.  In this lab, you can also monitor the WebSphere application server
-    memory change in Instana.
+5.  In this lab, you can also monitor the WebSphere application server memory change in Instana.
     
-    a. In **Instana administration console**, click **`Infrastructure`** icon, click
-        **`Comparison Table`**, select **`JVMs`** from the dropdown, and click **`bootstrap WAS90.SERV1.`**
+    a. Go back to the **Instana administration console** page, click **Infrastructure** icon, click
+        **Comparison Table**, select **JVMs** from the dropdown, and click **bootstrap WAS90.SERV1**
 
     ![Graphical user interface, application Description automatically
  generated](./lab2-media/media/image57.png)
@@ -1110,12 +1119,12 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
     ![Graphical user interface, text, application, email Description
  automatically generated](./lab2-media/media/image58.png)
 
-6. Set the `Time Range` to `Last 5 minutes` and click `Live` to see the current state
+6. Set the **Time Range** to **Last 5 minutes** and click **Live** to see the current state.
 
     ![](./lab2-media/media/4310-set-live-5min.png)
 
 
-7.  From the Terminal window, run the provided script which will run a sample memory leak application in WebSphere. Instana will immediately show the significant increase in JVM heap usage, which will create an application memory leak event.
+7.  From the terminal window, run the provided script which will run a sample memory leak application in WebSphere. Instana will immediately show the significant increase in JVM heap usage, which will create an application memory leak event.
 
         /home/ibmuser/WAS-Automation-LabFiles/techxchange/lab2-MemoryLeak/klp-curl_MLAPP_add_was.sh
 
@@ -1148,11 +1157,11 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
 
 9.  Go back to the WebSphere Automation UI. You see that WebSphere Automation has received the Memory leak alert and activate its investigation on the issue. 
 
-    Initially you might see the Server `Not identified yet` status and soon you see the server name is identified. 
+    Initially you might see the Server **Not identified yet** status and soon you see the server name is identified. 
 
     ![Graphical user interface, application Description automatically generated](./lab2-media/media/image60.png)
     
-    a. Click the **`Investigating`** link to view its details.
+    a. Click the **Investigating** link to view its details.
 
     ![Graphical user interface, text Description automaticallygenerated](./lab2-media/media/image61.png)
 
@@ -1177,11 +1186,11 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
     ![Graphical user interface, application Description automaticallygenerated](./lab2-media/media/image63.png)
 
 
-11. After a few minutes, the WebSphere Automation investigation will show `Investigation Complete`. You can see the analysis summary which points to the root cause of the issue.
+11. After a few minutes, the WebSphere Automation investigation will show **Investigation Complete**. You can see the analysis summary which points to the root cause of the issue.
 
     ![Investigation complete](./lab2-media/media/4310-investigation-complete.png)
     
-    You can also click **`Download all files`** to get the analysis
+    You can also click **Download all files** to get the analysis
     reports, heap dumps and WebSphere Automation runbooks on your workstation.
 
     ![Graphical user interface, text, application Description automatically generated](./lab2-media/media/image65.png)
@@ -1193,8 +1202,7 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
     ![Graphical user interface, text, application, email Description automatically generated](./lab2-media/media/image68.png)
 
 
-12. you can run a script to reduce the heap usage and then stop the WAS
-    server with the commands:
+12. you can run a script to reduce the heap usage and then stop the WAS server with the commands:
 
     a. Free the memory 
 
@@ -1208,7 +1216,6 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
 
     **Congratulations!** You have completed the WebSphere Automation Memory Leak Detection lab.
 
-    <br/>
 
 
 ### Appendix A: Detailed steps to configure Instana for memory leak alert
@@ -1241,22 +1248,22 @@ The actives include:
     You can create a custom payload by using the Instana administrative
 console or using the Instana API, in the lab, you are using the Instana administrative console.
 
-    a. From the Instana page, go to **`Settings > Team Settings`** page,
-    under **`Events & Alerts`**. Then click **`Custom Payload`**.
+    a. From the Instana page, go to **Settings > Team Settings** page,
+    under **Events & Alerts**. Then click **Custom Payload**.
 
     ![Graphical user interface, text, application, chat or text message
  Description automatically generated](./lab2-media/media/image32.png)
 
-    b. In the **`Key`** field, type **`PID`**, do not use any other value for the key. Set the **`Value type`** to **`Dynamic`**. In
-    the **`Value`** field, click **`Select Tag`** and select **`Internal -
-    Process ID`**, then click **`Save`**.
+    b. In the **Key** field, type **PID**, do not use any other value for the key. Set the **Value type** to **Dynamic**. In
+    the **Value** field, click **Select Tag** and select **Internal -
+    Process ID**, then click **Save**.
 
     ![Graphical user interface, application Description automatically
 generated](./lab2-media/media/image33.png)
 
 2.  Gather the WSA information required to set up the Alert Channel.
     
-    a. From the Terminal window, run the following **oc** commands to
+    a. From the terminal window, run the following **oc** commands to
         get the **Webhook URL** for WebSphere Automation installation.
 
         oc login --username=ibmadmin --password=engageibm --insecure-skip-tls-verify=true --server=https://api.demo.ibmdte.net:6443
@@ -1304,17 +1311,17 @@ generated](./lab2-media/media/image33.png)
 
     To create an alert channel by using the Instana administrative  console,
 
-    a.  On the Team Settings page, under **`Events & Alerts`**, click **`Alert Channels`**.
+    a.  On the Team Settings page, under **Events & Alerts**, click **Alert Channels**.
 
     ![Graphical user interface, application Description automatically
 generated](./lab2-media/media/image34.png)
 
-    b. Click **`Add Alert Channel`** and select **`Generic Webhook`**.
+    b. Click **Add Alert Channel** and select **Generic Webhook**.
 
     ![Graphical user interface, text, application Description
  automatically generated](./lab2-media/media/image35.png)
 
-    c. On the Create Generic **Webhook Alert Channel** page, enter the name as `WebSphere Automation Healing Webhook` in the **`Name`** field
+    c. On the Create Generic **Webhook Alert Channel** page, enter the name as **WebSphere Automation Healing Webhook** in the **Name** field
 
     d. Enter the **`Webhook URL`** you have for WebSphere
     Automation installation.
@@ -1324,12 +1331,12 @@ generated](./lab2-media/media/image34.png)
     ![Graphical user interface, text, application, email, Teams
  Description automatically generated](./lab2-media/media/image36.png)
 
-    e. Under **`Custom HTTP Request Headers`**, click **`Add Header`**.
+    e. Under **Custom HTTP Request Headers**, click **Add Header**.
 
     ![Graphical user interface, text, application, email, website
 Description automatically generated](./lab2-media/media/image37.png)
 
-    f. Create the following two `request headers`. Then click **`Test Channel`**.
+    f. Create the following two **request headers**. Then click **Test Channel**.
 
     <table>
     <thead>
@@ -1355,43 +1362,43 @@ Description automatically generated](./lab2-media/media/image37.png)
       ![Graphical user interface, text, application Description
  automatically generated](./lab2-media/media/image38.png)
  
-     g. Be sure you clicked **`Test Channel`** to test the channel before you proceed. 
+     g. Be sure you clicked **Test Channel** to test the channel before you proceed. 
 
     You should see the message showing the channel was successfully triggered.
 
     ![Graphical user interface, text, application, email Description
  automatically generated](./lab2-media/media/image39.png)
 
-4.  After verifying the channel, click **`Create`** to create it.
+4.  After verifying the channel, click **Create** to create it.
 
     The alert channel is created.
  
     ![Graphical user interface, application Description automatically
  generated](./lab2-media/media/image40.png)
 
-5.  Create a `custom event`
+5.  Create a custom event.
 
     A Custom Event enables you to create issues or incidents based on an individual metric of any given entity.
     
     To create a custom event by using the Instana administrative console:
 
-    a. On the Team Settings page, under **`Events & Alerts`**,
-    click **`Events`**, then click **`New Event`**.
+    a. On the Team Settings page, under **Events & Alerts**,
+    click **Events**, then click **New Event**.
 
     ![Graphical user interface, application Description automatically
  generated](./lab2-media/media/image41.png)
 
-    b. Create a custom event named “**`Memory Usage High`**”. Set its parameters as shown below. 
+    b. Create a custom event named “**Memory Usage High**”. Set its parameters as shown below. 
 
     **Note:** Refer to screenshot below!
 
-    `1. Event Details`
+    1. Event Details
       - Name: Memory Usage High
       - Description: Memory usage over 80%
       - Issue Severity: Warning
       - Grace Period: 90 s
 
-    `2. Condition`
+    2. Condition
       - Source: Built-in metrics
       - Entity type: JVM
       - Metric: Memory > Used percentage
@@ -1400,50 +1407,50 @@ Description automatically generated](./lab2-media/media/image37.png)
       - Operator: >=
       - Percentage: 80
 
-    `3. Scope`
+    3. Scope
       -  Apply on (required): All available entities
 
 
     ![Graphical user interface, application Description automatically
  generated](./lab2-media/media/image42.png)
 
-    c. Click **`Create`** to create the new custom event.
+    c. Click **Create** to create the new custom event.
 
-1.  Create an `alert`.
+1.  Create an **alert**.
 
     An Alert is raised when an event has triggered, such as high memory usage over 80% for some period. 
 
     To create an alert by using the Instana administrative console,
 
-    a. On the Team Settings page, under **`Events & Alerts`**,
-    click **`Alerts`**, then click **`New Alert`**.
+    a. On the Team Settings page, under **Events & Alerts**,
+    click **Alerts**, then click **New Alert**.
 
     ![Graphical user interface, application, Teams Description
  automatically generated](./lab2-media/media/image43.png)
 
-    b. In the **`Name`** field, type a name for the alert as: **`WebSphere Automation Healing Memory Leak`**.
+    b. In the **Name** field, type a name for the alert as: **WebSphere Automation Healing Memory Leak**.
 
     ![Graphical user interface, text, application, email Description
  automatically generated](./lab2-media/media/image44.png)
 
-    c. In the **`Events`** menu, select **`Alert on Event(s)`**.
+    c. In the **Events** menu, select **Alert on Event(s)**.
 
     ![Graphical user interface, application Description automatically
   generated](./lab2-media/media/image45.png)
 
-    d. In the **`Events`** section, click **`Add Event`**.
+    d. In the **Events** section, click **Add Event**.
 
     ![Graphical user interface, application Description automatically
  generated](./lab2-media/media/image46.png)
 
-    e. In the `Add Events window`, enter **`memory usage h`** in the search box and select **`Memory Usage High`**. You can filter the list by using a keyword (for example, leak) to help find the entry in the list.
+    e. In the **Add Events** window, enter **memory usage h** in the search box and select **Memory Usage High**. You can filter the list by using a keyword (for example, leak) to help find the entry in the list.
 
-    Click **`Add 1 Event`**.
+    Click **Add 1 Event**.
 
     ![Graphical user interface, application Description automatically
  generated](./lab2-media/media/image47.png)
 
-    f. Add two more events: **`Garbage collection activity high** (for JVM)` and **`Memory leak** (for JVM)`.
+    f. Add two more events: **Garbage collection activity high** (for JVM) and **Memory leak** (for JVM).
 
     ![Graphical user interface, text, application, email Description
  automatically generated](./lab2-media/media/image48.png)
@@ -1453,19 +1460,19 @@ Description automatically generated](./lab2-media/media/image37.png)
     ![Graphical user interface, text, application Description
  automatically generated](./lab2-media/media/image49.png)
 
-    g.  In the **`Scope`** menu, select **`All available entities`**.
+    g.  In the **Scope** menu, select **All available entities**.
 
     ![Graphical user interface, application, Teams Description
  automatically generated](./lab2-media/media/image50.png)
 
-    h.  Under **`Alerting`**, click **`Add Alert Channel`**, select the alert channel that you created previously. Then click **`Add 1 Channel`**.
+    h.  Under **Alerting**, click **Add Alert Channel**, select the alert channel that you created previously. Then click **Add 1 Channel**.
 
     ![Graphical user interface, application Description automatically
   generated](./lab2-media/media/image51.png)
  
     ![Graphical user interface, application Description automatically> generated](./lab2-media/media/image52.png)
 
-    i. Click **`Create`**.
+    i. Click **Create**.
 
     ![Graphical user interface, application, Teams Description
  automatically generated](./lab2-media/media/image53.png)
