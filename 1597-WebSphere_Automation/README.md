@@ -136,20 +136,6 @@ You can deploy it virtually anywhere through containers that are supported by Re
     ![](./lab1-media/media/4310-list-cloned-dir.png)
 
 
-=================================================
-
-### ERRATA - Fix an issue in our lab environment
-
-1. Change to the directory where the shell scripts are located. 
-
-        cd /home/ibmuser/WAS-Automation-LabFiles/techxchange
-
-2. Run the **errata.sh** shell script to fix a known issue in our lab environment:
-
-        sudo ./errata.sh
-
-===============================================
-
 ### 1.1 Overview - Configuring WebSphere Automation
 
 The Fix Deployment capability of WebSphere Automation delivers determines which APARs and interim fixes resolve a specific vulnerability, and enables one-click download and deploy of fixes. This capability augments the existing automated vulnerability assessment and fix history tracking.
@@ -663,36 +649,7 @@ After you select the fix, WebSphere Automation provides two options:
     ![](./lab1-media/media/image89.png)
 
 
-2. Stop the WebSphere Application Server: 
-
-    a. Go to a terminal window in the VM
-
-    b. Run the **stopServer.sh** command below 
-    
-        /opt/IBM/WebSphere/AppServer9057/bin/stopServer.sh tWAS_9057_server -username wasadmin -password wasadmin
-
-    ![](./lab1-media/media/image89-1.png)    
-
-	
-    <table>
-    <tbody>
-    <tr class="odd">
-    <td width=80><img src="./lab1-media/media/image4.png" alt="sign-info" /></td>
-    <td>
-    <p><strong>TIP:</strong> <br>IBM WebSphere Automation will attempt to stop the WebSphere Application Server, if the credentials areprovided in the <b>soap.client.props</b> file. <p> However, in this lab environment, the WebSphere credentials are not stored, and you must manually stop the WebSphere Application Server in order for IBM WebSphere Automation to apply the iFix that was downloaded.  
-    </p></td>
-    </tr>
-    </tbody>
-    </table>
-
-3. Verify the WebSphere Application Server is stopped, using the command below: 
-
-        /opt/IBM/WebSphere/AppServer9057/bin/serverStatus.sh tWAS_9057_server -username wasadmin -password wasadmin
-
-    ![](./lab1-media/media/image89-2.png) 
-   
-
-4. Install the fix to resolve the CVE.
+2. Install the fix to resolve the CVE.
 
     After the fix is successfully fetched, the action to **Install the fix** is made available next to the affected server.
 
@@ -724,32 +681,9 @@ After you select the fix, WebSphere Automation provides two options:
     > ![](./lab1-media/media/image97.png)
 
 
-5. Restart the WebSphere Application Server. 
-
-    a. Go to to a terminal window in the VM.
-
-    b. Run the following **startServer.sh** command: 
-    
-        /opt/IBM/WebSphere/AppServer9057/bin/startServer.sh tWAS_9057_server
-
-    ![](./lab1-media/media/image89-3.png)    
-
-
-<table>
-    <tbody>
-    <tr class="odd">
-    <td width=80><img src="./lab1-media/media/image4.png" alt="sign-info" /></td>
-    <td>
-    <p><strong>TIP:</strong> <br>IBM WebSphere Automation will START WebSphere Application Servers after it installs a fix, if and only if, IBM WebSphere Automation Stopped the server. <p> However, in this lab, you manually stopped WebSphere Application Server, so WebSphere Automation did NOT restart it. 
-    </p></td>
-    </tr>
-    </tbody>
-    </table>
-
 **Congratulations!** You successfully applied the iFix to resolve the critical CVE on the tWAS_9057_server. 
 
 In the next section of the lab, you review the updated security posture and fix history of the WebSphere server. 
-
 
 
 ### 4.3.3 View the security posture and Fix History of your WebSphere servers
