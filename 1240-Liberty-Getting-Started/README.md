@@ -84,7 +84,7 @@ In the lab, there will be different roles involved with perform different tasks 
 
     ![](./images/media/image003.png)
     
-4. Enter the password as: **IBMDm0s!** and press **Enter**.
+4. Enter the password as: **IBMDem0s!** and press **Enter**.
 
     ![](./images/media/image004.png)
     

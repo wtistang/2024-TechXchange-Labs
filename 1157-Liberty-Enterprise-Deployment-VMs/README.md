@@ -114,7 +114,7 @@ The **server1.gym.lan** VM contains the following components:
 
     ![](./images/media/image003.png)
     
-4. Enter the password as: **IBMDm0s!** and press **Enter**.
+4. Enter the password as: **IBMDem0s!** and press **Enter**.
 
    **Note:** That is a numeric zero in **IBMDem0s!**
 
