@@ -374,7 +374,7 @@ In this section, you will review the migration bundle to see what files need to 
 
     a.  From the **terminal window**, list the placeholder files in the migration bundle.
 
-        unzip -l /home/techzone/Downloads/plantsbywebsphereee6.ear\_migrationBundle.zip | grep placeholder
+        unzip -l /home/techzone/Downloads/plantsbywebsphereee6.ear_migrationBundle.zip | grep placeholder
  
     ![](./images/media/placeholder-files.png)
  
