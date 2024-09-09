@@ -29,7 +29,7 @@ You can deploy it virtually anywhere through containers that are supported by Re
 
 1.  Access the lab environment from your web browser.
     
-    The lab environment page is displayed, the lab environment contains
+    The lab environment page is displayed below. The lab environment contains
  seven (7) Linux VMs, including **student**, **instana** and OpenShift Container Platform (OCP) Cluster VMs. The VM **student** is
  the one with the Graphical User Interface (GUI) for you to access and work in this lab. The RedHat OpenShift Cluster VMs that hosts the  IBM WebSphere Automation solution. 
  
@@ -57,7 +57,7 @@ You can deploy it virtually anywhere through containers that are supported by Re
 
 **Tips for working in the lab environment:**
 
-1.  You can use the VM Desktop tools to fit to window or resize the
+1.  You can use the VM Desktop tools to fit to a window or resize the
     window.
 
     ![A screenshot of a computer Description automatically
@@ -90,7 +90,7 @@ You can deploy it virtually anywhere through containers that are supported by Re
 
 3. (Optional) Open the **lab-commands.txt** file in an editor, to copy & paste commands throughout the lab. 
 
-   **TIP:** You may use the **lab-commands.txt** file to copy & paste commands throught the lab after you have cloned the lab repo. 
+   **TIP:** You may use the **lab-commands.txt** file to copy & paste the commands through the lab after you have cloned the lab repo. 
    
         gedit /home/ibmuser/WAS-Automation-LabFiles/techxchange/lab-commands.txt
 
@@ -929,7 +929,7 @@ generated](./lab2-media/media/4310-custom-payload-created.png)
 
 2.  View the **alert channel** that was created for the lab
 
-    An Alert Channel is a mechanism that is used to get Events out of Instana and into another system when Events are trigger. There are a variety of Alert Channels including email notifications, slack, Watson AIOps, and more.
+    An Alert Channel is a mechanism that is used to get Events out of Instana and into another system when Events are triggered. There are a variety of Alert Channels including email notifications, slack, Watson AIOps, and more.
     
     a.  On the **Team Settings** page, under **Events & Alerts**, click **Alert Channels**.
 
@@ -946,7 +946,7 @@ generated](./lab2-media/media/4310-alert-channel-created.png)
     a. On the **Team Settings** page, under **Events & Alerts**,
     click **Events**.
 
-    b. In the **search field**, enter **memory usgae high** to filter the list of events.
+    b. In the **search field**, enter **memory usage high** to filter the list of events.
 
     You see the custom event named **Memory Usage High** that was configured for the lab.  
 
@@ -1035,7 +1035,7 @@ When WebSphere Automation detects the memory leak, it automatically conducts the
     ![Graphical user interface, application, Teams Description
  automatically generated](./lab2-media/media/image55.png)
  
-    Since all the application are working fine at this time, you do not see any health investigations on the Health page yet.
+    Since all the applications are working fine at this time, you do not see any health investigations on the Health page yet.
  
     ![Graphical user interface, text, application Description
   automatically generated](./lab2-media/media/image56.png)

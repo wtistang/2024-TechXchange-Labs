@@ -101,7 +101,7 @@ The **server1.gym.lan** VM contains the following components:
 
 1.  Access the lab environment from your web browser.
     
-    The lab environment page is displayed, the lab environment contains three (3) Linux VMs, **server0**, **server1** and **instanaserver**. The VM **server0** is the one with the Graphical User Interface (GUI) for you to access and work in this lab. From the **server0** GUI you are going to use the lab shell scripts to access and work with **server1**. The **instanaserver** VM is not used in this lab.
+    The lab environment page is displayed below. The lab environment contains three (3) Linux VMs, **server0**, **server1** and **instanaserver**. The VM **server0** is the one with the Graphical User Interface (GUI) for you to access and work in this lab. From the **server0** GUI you are going to use the lab shell scripts to access and work with **server1**. The **instanaserver** VM is not used in this lab.
  
     ![Screens screenshot of a computer Description automatically
  generated](./images/media/image2.png)
@@ -129,7 +129,7 @@ The **server1.gym.lan** VM contains the following components:
 
 **Tips for working in the lab environment:**
 
-1.  You can use the VM Desktop tools to fit to window or resize the
+1.  You can use the VM Desktop tools to fit to a window or resize the
     window.
 
     ![A screenshot of a computer Description automatically
@@ -222,7 +222,7 @@ This lab requires artifacts that are stored in a GitHub repository. Run
 the command below to clone the repository to the local VM used for the
 lab.
 
-1.  Open a new terminal window by clicking the termical icon on the desktop.
+1.  Open a new terminal window by clicking the terminal icon on the desktop.
 
     <img src="./images/media/image12.png" width="200"/>
 
@@ -725,7 +725,7 @@ perform the following tasks:
 
   - **Create a Plug-in configuration file for the HTTP Server**
 
-    The **dynamicRouting setu** command generates the **keystore** and
+    The **dynamicRouting setup** command generates the **keystore** and
  **plug-in configuration files** required for dynamic routing.
 
   - **Establish a secure connection between the plug-in and the
@@ -1285,7 +1285,7 @@ VM **server1.gym.lan** following the same steps as above.
 5.  **Start** the collective member **22.0.0.12-appServer02** from the
     Liberty Admin Center.
 
-    The final state should reflect the 22.0.0.12 servers are RUNNING, and
+    The final state should reflect that the 22.0.0.12 servers are RUNNING, and
 the 22.0.0.8 servers are STOPPED.
 
     ![](./images/media/image72.png)
@@ -1297,7 +1297,7 @@ packages for flexible deployments.
 
     </br>
 
-    The final activity in this lab is to demonstrate the applications
+    The final activity in this lab is to demonstrate that the applications
 continue to run as-is after the upgrade.
 
 
