@@ -6,13 +6,13 @@ The goal of this lab is to provide hands-on experience using recommended
 practices for deploying Java applications to Liberty in collectives on
 VMs, using automation and flexible deployment methodologies.
 
-You will learn how Liberty dynamic routing feature enables routing of
+You learn how Liberty dynamic routing feature enables routing of
 HTTP requests to all members of Liberty collectives without regenerating
 the WebSphere plug-in configuration file when servers, collective
 members, applications, or virtual hosts are added, removed, started,
 stopped, or modified.
 
-You will also learn that Liberty follows a single stream continuous
+You also learn that Liberty follows a single stream continuous
 delivery model. There is only one stream of Liberty, no version upgrades
 necessary. Simply install new version (or fixpacks if you prefer) to get
 the latest performance enhancements, features, and bug fixes. Then use
@@ -22,7 +22,7 @@ configuration, and then deploy to a dual installation location. This
 removes one of the largest headaches for managing technical debt for
 your applications: keeping current on software updates.
 
-Following these methodologies, you will gain an understanding of how you
+Following these methodologies, you gain an understanding of how you
 might apply your own DevOps processes or automation to achieve
 significant agility and flexibility managing Liberty deployments with
 repeatable automated processes that significantly reduces risk to your
@@ -55,10 +55,10 @@ The lab environemnt consists of three Host VMs:
 
   - instanaserver (not used)
 
-You will use Linux shell scripts provided for the lab, to build Liberty
+You use Linux shell scripts provided for the lab, to build Liberty
 server packages, construct a Liberty- ND Collective that spans the **server0** and **server1** host VMs, and deploy the server package to these two host VMs.
 
-The Liberty-ND Collective that you will create is illustrated below:
+The Liberty-ND Collective that you create is illustrated below:
 
 ![](./images/media/image1.png)
 
@@ -167,7 +167,7 @@ compressed **zip** or **jar** package. You can then store this package and
 use it to deploy the installation to different nodes or machines in your
 Liberty Collective.
 
-In this lab, you will deploy Liberty and sample applications to a
+In this lab, you deploy Liberty and sample applications to a
 Liberty-ND Collective, while following several common practices as
 illustrated below.
 
@@ -243,7 +243,7 @@ lab.
 ## Part 2: Produce Liberty “server packages” as build output
 
 Following recommended practices for flexible deployment of Liberty
-applications, you will produce a server package as build output, which
+applications, you produce a server package as build output, which
 includes the Liberty runtime, server configuration, and the application,
 as a zip archive file.
 
@@ -274,14 +274,14 @@ collective.
 </tbody>
 </table>
 
-In this section of the lab, you will use the provided shell script that
+In this section of the lab, you use the provided shell script that
 automates the tasks for producing a server package for deployment to the
 collective. 
 
 **Use the Maven Build script to produce a Server package**
 
 1.  Run the **Maven Build** shell script to build the applications and
-    produce a Liberty Server package, which will use WebSphere Liberty
+    produce a Liberty Server package, which uses WebSphere Liberty
     kernel, version 22.0.0.8
 
         /home/techzone/liberty_admin_pot/lab-scripts/mavenBuild.sh -v 22.0.0.8
@@ -380,7 +380,7 @@ Now that you have a server package, it can be deployed to local or
 remote hosts (VMs / machines) where the Liberty collective members will
 host the sample applications.
 
-In the next sections of the lab, you will continue the recommended
+In the next sections of the lab, you continue the recommended
 practice of using automation to create a **Liberty Collective** and deploy
 the server package to two hosts (VMs), and add the deployed servers to
 the Liberty Collective, where the servers can be centrally managed by
@@ -417,7 +417,7 @@ that are called **collective members**.
 
 ![](./images/media/image18.png)
 
-In this section of the lab, you will create the **Collective** and
+In this section of the lab, you create the **Collective** and
 the **Collective Controller** using automation, via
 the **createController.sh** shell script.
 
@@ -505,7 +505,7 @@ through the controller operational repository.
 
 ![](./images/media/image25.png)
 
-In this section of the lab, you will join Liberty servers as collective
+In this section of the lab, you join Liberty servers as collective
 members to the collective, using the server package that you produced
 previously in the lab.
 
@@ -523,8 +523,7 @@ members to the collective.
 
   - Register the Host machine if it is remote VM from the Controller
 
-  - Copy or send the server package to the host machine where Liberty
-    will be deployed
+  - Copy or send the server package to the host machine where Liberty is deployed
 
   - Unzip the server package, which is an archive installation of
     Liberty on the hosts machines (VMs)
@@ -578,7 +577,7 @@ package you created earlier and join them as a member to the collective.
 ## Part 5: Verify the application deployment in the collective
 
 You have deployed two Liberty servers as the collective members. In this
-section, you will start these two servers from the Liberty Admin Center
+section, you start these two servers from the Liberty Admin Center
 and run the example applications on the individual Liberty servers to
 ensure the applications run properly.
 
@@ -609,7 +608,7 @@ which you need to ensure is up and running.
     ![A screenshot of a computer Description automatically generated with
  medium confidence](./images/media/image30.png)
  
-    Server **appServer1** will start, and you can see it is now in
+    Server **appServer1** starts, and you can see it is now in
  the **Running** state.
  
     The appServer1 server now shows it has two applications **running**, which
@@ -632,7 +631,7 @@ which you need to ensure is up and running.
 
 ### 5.1 Test the two example applications used in the lab
 
-In this section, you will test the two applications that are deployed in
+In this section, you test the two applications that are deployed in
 the collective.
 
 **Test the PlantsByWebSphere application:**
@@ -738,7 +737,7 @@ perform the following tasks:
 
 ### 6.1 Setup Dynamic Routing in WebSphere Liberty
 
-In this section, you will use an automation script, which we provide in
+In this section, you use an automation script, which we provide in
 the lab environment, to perform the steps described above to setup and
 configure Dynamic Routing.
 
@@ -871,8 +870,7 @@ an http session. Then on subsequent transactions or requests, the
 JSESSIONID is read by the web server plugin, and requests continue to be
 routed to the SAME server.
 
-If the server handing the requests goes down, then the web server plugin
-will redirect the requests to any surviving servers.
+If the server handing the requests goes down, then the web server plugin redirects the requests to any surviving servers.
 
 However, without session persistence configured, any session data is
 lost, such as items in a shopping cart, or login cookies, etc.
@@ -993,24 +991,24 @@ style.
 
 ## Part 8: Produce a new server package using Liberty 22.0.0.12
 
-In this section of the lab, you will use the same automated
+In this section of the lab, you use the same automated
 **mavenBuild** script that was used in previous labs to produce a
 NEW Liberty server package, with only one notable difference; the server
-package will include Liberty **22.0.0.12** instead of **22.0.0.8**.
+package includes Liberty **22.0.0.12** instead of **22.0.0.8**.
 
 Producing the build output in the form of a Liberty server package zip
 file provides the flexibility of deploying and upgrading your version of
 Liberty and applications as an immutable package, like how container
 images are deployed to Kubernetes container platforms.
 
-In this section of the lab, you will use the provided shell script that
+In this section of the lab, you use the provided shell script that
 automates the tasks for producing a server package for deployment to the
 collective.
 
 **Use the Maven Build script to produce a Server package with Liberty 22.0.0.12**
 
 1.  Run the following command to build the applications and produce a
-    server package, which will use WebSphere Liberty kernel, version
+    server package, which uses WebSphere Liberty kernel, version
     22.0.0.12.
 
         /home/techzone/liberty_admin_pot/lab-scripts/mavenBuild.sh -v 22.0.0.12
@@ -1047,7 +1045,7 @@ Liberty 22.0.0.12.
 
 <br/>
 
-   In the next sections of the lab, you will continue the best practice of
+   In the next sections of the lab, you continue the best practice of
 using automation to deploy the server package to two hosts (VMs) and
 join the deployed servers to the Liberty Collective.
 
@@ -1188,10 +1186,10 @@ Now that the new Liberty servers with Liberty version 22.0.0.12 have
 been deployed to the collective, all you need to do now is ripple start
 the servers.
 
-Ripple starting the servers will allow the new application servers to
+Ripple starting the servers allows the new application servers to
 accept incoming request without incurring an application outage.
 
-The ripple start will be manually performed in the Admin Center in this
+The ripple start is manually performed in the Admin Center in this
 lab. However, like the other automated scripts you have used, this
 process can also be easily automated.
 
@@ -1228,7 +1226,7 @@ process can also be easily automated.
     ![A screenshot of a computer error Description automatically generated
  with medium confidence](./images/media/image65.png)
  
-    Server **appServer1** will stop, and you can see it is now in
+    Server **appServer1** stops, and you can see it is now in
  the **Stopped** state.
  
     ![A screenshot of a computer Description automatically generated with
@@ -1248,7 +1246,7 @@ process can also be easily automated.
     ![A screenshot of a computer Description automatically generated with
  medium confidence](./images/media/image68.png)
  
-    Server **22.0.0.12-appServer1** will start, and you can see it is now
+    Server **22.0.0.12-appServer1** starts, and you can see it is now
  in the **Running** state.
  
     ![A screenshot of a computer Description automatically generated with
@@ -1307,7 +1305,7 @@ continue to run as-is after the upgrade.
 You have successfully ripple started the new 22.0.0.12 servers in the
 collective.
 
-In this section, you will test the PlantsByWebSphere and WhereAmI
+In this section, you test the PlantsByWebSphere and WhereAmI
 applications and ensure the applications run properly after the upgrade
 to Liberty 22.0.0.12.
 
@@ -1321,7 +1319,7 @@ to Liberty 22.0.0.12.
  
         https://server0.gym.lan:9441/PlantsByWebSphere
  
-    **Note:** You will likely see the **Warning: Potential Security Risk
+    **Note:** You likely see the **Warning: Potential Security Risk
  Ahead** message, click **Advanced-\>**. scroll down and click **Accept Risk and Continue** to
  continue. The warning occurs because new self-signed certs were
  created when deploying the new application server version.
@@ -1333,7 +1331,7 @@ to Liberty 22.0.0.12.
  
     ![](./images/media/image74.png)
  
-    c. On the **Help** page, you will see the Server name and the
+    c. On the **Help** page, you see the Server name and the
  version of Liberty that is running for the server that handled this
  specific request.
  
@@ -1351,7 +1349,7 @@ to Liberty 22.0.0.12.
 
          https://server1.gym.lan:9442/PlantsByWebSphere
  
-    **Note:** You will likely see the **Warning: Potential Security Risk
+    **Note:** You likely see the **Warning: Potential Security Risk
  Ahead** message, click **Advanced-\>**. scroll down and click **Accept Risk and Continue** to
  continue.
  
