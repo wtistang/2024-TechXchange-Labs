@@ -60,7 +60,7 @@ In the lab, there are different roles involved with performing different tasks a
         * Configures Liberty for the target application using Liberty configuration snippets
         * Applies security to harden the Liberty configuration
         * Configure logging using configDropins
-        * Review the configuration using LIberty REST APIs
+        * Review the configuration using Liberty REST APIs
         * Monitor Liberty using the Admin Center
     * Tools:
         * Liberty server command to create a Liberty instance and start, stop or dump it
