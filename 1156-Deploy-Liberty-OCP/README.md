@@ -166,7 +166,7 @@ To simplify the lab and to allow you to focus on the migration bundle, certain s
 
 2. Start the **PlantsByWebSphere** application database
 
-    The PlantsByWebShere application database runs in a local docker container. Usethe command below to start the database. 
+    The PlantsByWebShere application database runs in a local docker container. Use the command below to start the database. 
 
         docker start db2_demo_data
 
@@ -446,7 +446,7 @@ In this section, extract the migration bundle that you downloaded. Then, copy th
  
     ![A website page of a garden Description automatically generated](./images/media/image36.png)
 
-8.  Attempt to click any of the tabs: **Flowers**, **Fruits & Vegetables**, or **Trees**, you should see the application pages displaying a catalog of items in their respective category, which are rereived from the application database, but instead you see an exception error like this:
+8.  Attempt to click any of the tabs: **Flowers**, **Fruits & Vegetables**, or **Trees**, you should see the application pages displaying a catalog of items in their respective category, which are retrieved from the application database, but instead you see an exception error like this:
 
     ![A screen shot of a computer Description automatically generated](./images/media/image37.png)
 
@@ -472,7 +472,7 @@ The **server.xml** file defines a set of **features** that the application requi
 
         gedit /home/techzone/wlp/usr/servers/pbwserver/server.xml
 
-    - **Section 1** contains the **features** that the application requires, and these are discovered automatically during analysis performed the Transformation Advisor **Data Collector**.
+    - **Section 1** contains the **features** that the application requires, and these are discovered automatically during analysis performed by the Transformation Advisor **Data Collector**.
 
       ![A screenshot of a computer Description automatically generated](./images/media/image38.png)
 
@@ -913,7 +913,7 @@ You must specify which overlay will provide the configuration (dev in this case)
 
 9. Verify the appliation **pod** is ready.
 
-    This may take a few moments. Just keep checkig with command below
+    This may take a few moments. Just keep checking with command below
 
         oc get pods -n apps-pbw
 
@@ -1151,11 +1151,11 @@ We will not cover all of GitOps it in detail in this lab - however, there are tw
 
 With the GitOps approach, there is the risk that the deployed configuration for the OpenShift cluster does not match what is in the Git repository. Someone could have updated the OpenShift cluster directly, for example. There are a number of tools to manage this configuration drift, with ArgoCD being a common tool to address this issue. It can be configured to sync manually or automatically, so that any changes made directly on the cluster are reverted to what is in the Git repository. 
 
-The OpenShift GitOps Operator can be used to install ArgoCD into your OpenShift cluster. Further details on how to this can be found here: <https://developer.ibm.com/tutorials/deploy-open-liberty-applications-with-gitops/>
+The OpenShift GitOps Operator can be used to install ArgoCD into your OpenShift cluster. Further details on how to this can be found here: <https://openliberty.io/blog/2024/04/26/ArgoCD-Configuration-Drift.html>
 
 **Securing Secrets**
 
-Even with controls and restricted access to Git repositories, it is not considered good practice to store the sensitive data in plain text (aka the values entered into the secrets files). There are generally two approaches you can take to tackle this: encrypt the values or use a reference:
+Even with controls and restricted access to Git repositories, it is not considered good practice to store the sensitive data in plain text (aka the values entered into the secrets files). There are generally two approaches you can take to tackle this, encrypt the values or use a reference:
 
   - **Encrypt the values**: In this approach, the value in the secret file is encrypted when it is committed to the Git repo. During deployment to OpenShift there is an extra step where the secret values are decrypted. **SealedSecrets** is one implementation of such an approach.
 
@@ -1290,7 +1290,7 @@ This workspace has only a single application name **plantsbywebsphereee6.ear**. 
  
     ![](./images/media/image115.png)
 
-    b.  Scroll down to the bottom of the **Inventory report** and locate **the Contained Archives** section.
+    b.  Scroll down to the bottom of the **Inventory report** and locate the **Contained Archives** section.
 
     The inventory report provides valuable insights into utility jars that are contained in the application. It also provides the ‘package’ name of the utility jar. This is extremely valuable to help determine what 3<sup>rd</sup> party utilities are used by the application.
 
@@ -1304,7 +1304,7 @@ This workspace has only a single application name **plantsbywebsphereee6.ear**. 
  
     ![A screenshot of a computer Description automatically generated](./images/media/image117.png)
 
-    a.  Scroll down Technology Report, which can quickly help assess which Java EE API technologies that the PlantsByWebSphere application uses, and which editions of Liberty the APIS are available.
+    a.  Scroll down the **Technology Report**, which can quickly help assess which Java EE API technologies that the PlantsByWebSphere application uses, and which editions of Liberty the APIs are available.
 
     ![A screenshot of a computer Description automatically generated](./images/media/image118.png)
 
